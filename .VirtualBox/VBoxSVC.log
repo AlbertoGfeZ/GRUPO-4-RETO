@@ -1,0 +1,350 @@
+00:00:00.003526 main     VirtualBox COM Server 7.0.12 r159484 win.amd64 (Oct 12 2023 19:53:29) release log
+00:00:00.003529 main     Log opened 2024-04-25T13:09:58.036891100Z
+00:00:00.003529 main     Build Type: release
+00:00:00.003537 main     OS Product: Windows 10
+00:00:00.003538 main     OS Release: 10.0.19045
+00:00:00.003538 main     OS Service Pack: 
+00:00:00.024291 main     DMI Product Name: MS-7996
+00:00:00.037712 main     DMI Product Version: 1.0
+00:00:00.037729 main     Firmware type: UEFI
+00:00:00.038159 main     Secure Boot: VERR_PRIVILEGE_NOT_HELD
+00:00:00.038192 main     Host RAM: 16274MB (15.8GB) total, 10596MB (10.3GB) available
+00:00:00.038197 main     Executable: C:\Program Files\Oracle\VirtualBox\VBoxSVC.exe
+00:00:00.038197 main     Process ID: 9016
+00:00:00.038198 main     Package type: WINDOWS_64BITS_GENERIC
+00:00:00.042295 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042298 main     1409: create key '{d7569351-1750-46f0-936e-bd127d5bc264}' -> 5
+00:00:00.042384 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042385 main     1251: create key '{0bb3b78c-1807-4249-5ba5-ea42d66af0bf}' -> 5
+00:00:00.042386 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042387 main     1251: create key '{0bb3b78c-1807-4249-5ba5-ea42d66af0bf}'(/Default='PSFactoryBuffer') -> 5
+00:00:00.042523 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042524 main     1542: create key '{67c50afe-3e78-11e9-b25e-7768f80c0e07}' -> 5
+00:00:00.042524 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042525 main     1542: create key '{67c50afe-3e78-11e9-b25e-7768f80c0e07}'(/Default='IFormValue') -> 5
+00:00:00.042608 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042609 main     1542: create key '{813c99fc-9849-4f47-813e-24a75dc85615}' -> 5
+00:00:00.042609 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042610 main     1542: create key '{813c99fc-9849-4f47-813e-24a75dc85615}'(/Default='IParallelPortChangedEvent') -> 5
+00:00:00.042712 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042714 main     1542: create key '{22363cfc-07da-41ec-ac4a-3dd99db35594}' -> 5
+00:00:00.042714 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042715 main     1542: create key '{22363cfc-07da-41ec-ac4a-3dd99db35594}'(/Default='ICloudProvider') -> 5
+00:00:00.042796 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042797 main     1542: create key '{6b2f98f8-9641-4397-854a-040439d0114b}' -> 5
+00:00:00.042797 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042798 main     1542: create key '{6b2f98f8-9641-4397-854a-040439d0114b}'(/Default='IGuestScreenInfo') -> 5
+00:00:00.042877 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042878 main     1542: create key '{537707f7-ebf9-4d5c-7aea-877bfc4256ba}' -> 5
+00:00:00.042879 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042879 main     1542: create key '{537707f7-ebf9-4d5c-7aea-877bfc4256ba}'(/Default='IDHCPGroupConfig') -> 5
+00:00:00.042956 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042957 main     1542: create key '{4f4adcf6-3e87-11e9-8af2-576e84223953}' -> 5
+00:00:00.042957 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.042958 main     1542: create key '{4f4adcf6-3e87-11e9-8af2-576e84223953}'(/Default='IBooleanFormValue') -> 5
+00:00:00.043031 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043032 main     1542: create key '{5587d0f6-a227-4f23-8278-2f675eea1bb2}' -> 5
+00:00:00.043032 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043033 main     1542: create key '{5587d0f6-a227-4f23-8278-2f675eea1bb2}'(/Default='ISerialPort') -> 5
+00:00:00.043109 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043110 main     1542: create key '{dfa7e4f5-b4a4-44ce-85a8-127ac5eb59dc}' -> 5
+00:00:00.043110 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043111 main     1542: create key '{dfa7e4f5-b4a4-44ce-85a8-127ac5eb59dc}'(/Default='ICPUExecutionCapChangedEvent') -> 5
+00:00:00.043188 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043189 main     1542: create key '{d947adf5-4022-dc80-5535-6fb116815604}' -> 5
+00:00:00.043190 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043190 main     1542: create key '{d947adf5-4022-dc80-5535-6fb116815604}'(/Default='INATNetworkAlterEvent') -> 5
+00:00:00.043270 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043271 main     1542: create key '{c4b1b5f4-8cdf-4923-9ef6-b92476a84109}' -> 5
+00:00:00.043271 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043272 main     1542: create key '{c4b1b5f4-8cdf-4923-9ef6-b92476a84109}'(/Default='IUpdateAgent') -> 5
+00:00:00.043345 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043347 main     1542: create key '{0de887f2-b7db-4616-aac6-cfb94d89ba78}' -> 5
+00:00:00.043347 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043348 main     1542: create key '{0de887f2-b7db-4616-aac6-cfb94d89ba78}'(/Default='IGuestProcessInputNotifyEvent') -> 5
+00:00:00.043420 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043422 main     1542: create key '{4fdebbf0-be30-49c0-b315-e9749e1bded1}' -> 5
+00:00:00.043422 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043423 main     1542: create key '{4fdebbf0-be30-49c0-b315-e9749e1bded1}'(/Default='INATNetwork') -> 5
+00:00:00.043500 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043501 main     1542: create key '{714a3eef-799a-4489-86cd-fe8e45b2ff8e}' -> 5
+00:00:00.043502 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043502 main     1542: create key '{714a3eef-799a-4489-86cd-fe8e45b2ff8e}'(/Default='ISessionStateChangedEvent') -> 5
+00:00:00.043577 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043578 main     1542: create key '{70401eef-c8e9-466b-9660-45cb3e9979e4}' -> 5
+00:00:00.043578 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043579 main     1542: create key '{70401eef-c8e9-466b-9660-45cb3e9979e4}'(/Default='IExtPackManager') -> 5
+00:00:00.043654 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043655 main     1542: create key '{d3d5f1ee-bcb2-4905-a7ab-cc85448a742b}' -> 5
+00:00:00.043656 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043656 main     1542: create key '{d3d5f1ee-bcb2-4905-a7ab-cc85448a742b}'(/Default='IGuestProcessOutputEvent') -> 5
+00:00:00.043738 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043739 main     1542: create key '{9b6e1aee-35f3-4f4d-b5bb-ed0ecefd8538}' -> 5
+00:00:00.043739 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043740 main     1542: create key '{9b6e1aee-35f3-4f4d-b5bb-ed0ecefd8538}'(/Default='IEventSource') -> 5
+00:00:00.043814 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043815 main     1542: create key '{7682d5eb-f00e-44f1-8ca2-99d08b1cd607}' -> 5
+00:00:00.043815 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043816 main     1542: create key '{7682d5eb-f00e-44f1-8ca2-99d08b1cd607}'(/Default='IVirtualBox') -> 5
+00:00:00.043889 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043890 main     1542: create key '{d78374e9-486e-472f-481b-969746af2480}' -> 5
+00:00:00.043890 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043891 main     1542: create key '{d78374e9-486e-472f-481b-969746af2480}'(/Default='IGuestFileSizeChangedEvent') -> 5
+00:00:00.043965 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043967 main     1542: create key '{a6dcf6e8-416b-4181-8c4a-45ec95177aef}' -> 5
+00:00:00.043967 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.043968 main     1542: create key '{a6dcf6e8-416b-4181-8c4a-45ec95177aef}'(/Default='IMousePointerShapeChangedEvent') -> 5
+00:00:00.044042 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044043 main     1542: create key '{6e253ee8-477a-2497-6759-88b8292a5af0}' -> 5
+00:00:00.044043 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044044 main     1542: create key '{6e253ee8-477a-2497-6759-88b8292a5af0}'(/Default='IEmulatedUSB') -> 5
+00:00:00.044120 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044121 main     1542: create key '{46735de7-f4c4-4020-a185-0d2881bcfa8b}' -> 5
+00:00:00.044122 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044122 main     1542: create key '{46735de7-f4c4-4020-a185-0d2881bcfa8b}'(/Default='IDHCPGlobalConfig') -> 5
+00:00:00.044197 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044198 main     1542: create key '{9db3a9e6-7f29-4aae-a627-5a282c83092c}' -> 5
+00:00:00.044199 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044199 main     1542: create key '{9db3a9e6-7f29-4aae-a627-5a282c83092c}'(/Default='INATNetworkSettingEvent') -> 5
+00:00:00.044275 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044276 main     1542: create key '{2405f0e5-6588-40a3-9b0a-68c05ba52c4b}' -> 5
+00:00:00.044276 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044277 main     1542: create key '{2405f0e5-6588-40a3-9b0a-68c05ba52c4b}'(/Default='IGuestProcessEvent') -> 5
+00:00:00.044356 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044357 main     1542: create key '{f2f7fae4-4a06-81fc-a916-78b2da1fa0e5}' -> 5
+00:00:00.044358 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044358 main     1542: create key '{f2f7fae4-4a06-81fc-a916-78b2da1fa0e5}'(/Default='IAdditionsFacility') -> 5
+00:00:00.044433 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044434 main     1542: create key '{392f1de4-80e1-4a8a-93a1-67c5f92a838a}' -> 5
+00:00:00.044434 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044435 main     1542: create key '{392f1de4-80e1-4a8a-93a1-67c5f92a838a}'(/Default='ICertificate') -> 5
+00:00:00.044510 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044511 main     1542: create key '{d05c91e2-3e8a-11e9-8082-db8ae479ef87}' -> 5
+00:00:00.044511 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044512 main     1542: create key '{d05c91e2-3e8a-11e9-8082-db8ae479ef87}'(/Default='IForm') -> 5
+00:00:00.044592 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044593 main     1542: create key '{a0bad6df-d612-47d3-89d4-db3992533948}' -> 5
+00:00:00.044593 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044594 main     1542: create key '{a0bad6df-d612-47d3-89d4-db3992533948}'(/Default='IHostPCIDevicePlugEvent') -> 5
+00:00:00.044671 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044672 main     1542: create key '{788b87df-7708-444b-9eef-c116ce423d39}' -> 5
+00:00:00.044673 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044673 main     1542: create key '{788b87df-7708-444b-9eef-c116ce423d39}'(/Default='IParallelPort') -> 5
+00:00:00.044747 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044748 main     1542: create key '{755e6bdf-1640-41f9-bd74-3ef5fd653250}' -> 5
+00:00:00.044748 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044749 main     1542: create key '{755e6bdf-1640-41f9-bd74-3ef5fd653250}'(/Default='IKeyboard') -> 5
+00:00:00.044824 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044825 main     1542: create key '{4680b2de-8690-11e9-b83d-5719e53cf1de}' -> 5
+00:00:00.044825 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044826 main     1542: create key '{4680b2de-8690-11e9-b83d-5719e53cf1de}'(/Default='IDisplay') -> 5
+00:00:00.044901 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044902 main     1542: create key '{c19073dd-cc7b-431b-98b2-951fda8eab89}' -> 5
+00:00:00.044902 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044903 main     1542: create key '{c19073dd-cc7b-431b-98b2-951fda8eab89}'(/Default='IHostUSBDevice') -> 5
+00:00:00.044977 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044978 main     1542: create key '{1f99d9dc-c144-4c28-9f88-e6f488db5441}' -> 5
+00:00:00.044979 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.044979 main     1542: create key '{1f99d9dc-c144-4c28-9f88-e6f488db5441}'(/Default='IGuestMultiTouchEvent') -> 5
+00:00:00.045058 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045059 main     1542: create key '{890ed3dc-cc19-43fa-8ebf-baecb6b9ec87}' -> 5
+00:00:00.045060 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045060 main     1542: create key '{890ed3dc-cc19-43fa-8ebf-baecb6b9ec87}'(/Default='IVirtualBoxSDS') -> 5
+00:00:00.045137 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045138 main     1542: create key '{00f4a8dc-0002-4b81-0077-1dcb004571ba}' -> 5
+00:00:00.045139 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045139 main     1542: create key '{00f4a8dc-0002-4b81-0077-1dcb004571ba}'(/Default='IDHCPConfig') -> 5
+00:00:00.045214 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045215 main     1542: create key '{3ba329dc-659c-488b-835c-4eca7ae71c6c}' -> 5
+00:00:00.045216 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045216 main     1542: create key '{3ba329dc-659c-488b-835c-4eca7ae71c6c}'(/Default='ISerialPortChangedEvent') -> 5
+00:00:00.045291 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045292 main     1542: create key '{431685da-3618-4ebc-b038-833ba829b4b2}' -> 5
+00:00:00.045293 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045293 main     1542: create key '{431685da-3618-4ebc-b038-833ba829b4b2}'(/Default='IExtPack') -> 5
+00:00:00.045368 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045369 main     1542: create key '{dedfb5d9-4c1b-edf7-fdf3-c1be6827dc28}' -> 5
+00:00:00.045369 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045370 main     1542: create key '{dedfb5d9-4c1b-edf7-fdf3-c1be6827dc28}'(/Default='IGuestDnDSource') -> 5
+00:00:00.045444 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045446 main     1542: create key '{c39ef4d6-7532-45e8-96da-eb5986ae76e4}' -> 5
+00:00:00.045446 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045447 main     1542: create key '{c39ef4d6-7532-45e8-96da-eb5986ae76e4}'(/Default='IVRDEServerInfo') -> 5
+00:00:00.045522 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045523 main     1542: create key '{01adb2d6-aedf-461c-be2c-99e91bdad8a1}' -> 5
+00:00:00.045523 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045524 main     1542: create key '{01adb2d6-aedf-461c-be2c-99e91bdad8a1}'(/Default='IHostUSBDeviceFilter') -> 5
+00:00:00.045599 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045600 main     1542: create key '{c1bcc6d5-7966-481d-ab0b-d0ed73e28135}' -> 5
+00:00:00.045600 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045601 main     1542: create key '{c1bcc6d5-7966-481d-ab0b-d0ed73e28135}'(/Default='IVirtualBoxErrorInfo') -> 5
+00:00:00.045679 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045680 main     1542: create key '{5155bfd3-7ba7-45a8-b26d-c91ae3754e37}' -> 5
+00:00:00.045681 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045681 main     1542: create key '{5155bfd3-7ba7-45a8-b26d-c91ae3754e37}'(/Default='IAudioAdapter') -> 5
+00:00:00.045755 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045756 main     1542: create key '{966303d0-36a8-4180-8971-18650b0d1055}' -> 5
+00:00:00.045757 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045757 main     1542: create key '{966303d0-36a8-4180-8971-18650b0d1055}'(/Default='IGuestOSType') -> 5
+00:00:00.045833 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045834 main     1542: create key '{f9b9e1cf-cb63-47a1-84fb-02c4894b89a9}' -> 5
+00:00:00.045834 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045835 main     1542: create key '{f9b9e1cf-cb63-47a1-84fb-02c4894b89a9}'(/Default='IHostNameResolutionConfigurationChangeEvent') -> 5
+00:00:00.045910 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045911 main     1542: create key '{89a63ace-0c65-11ea-ad23-0ff257c71a7f}' -> 5
+00:00:00.045912 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045912 main     1542: create key '{89a63ace-0c65-11ea-ad23-0ff257c71a7f}'(/Default='ICloudNetworkGatewayInfo') -> 5
+00:00:00.045992 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045993 main     1542: create key '{024f00ce-6e0b-492a-a8d0-968472a94dc7}' -> 5
+00:00:00.045993 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.045994 main     1542: create key '{024f00ce-6e0b-492a-a8d0-968472a94dc7}'(/Default='IExtraDataChangedEvent') -> 5
+00:00:00.046068 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046069 main     1542: create key '{97c78fcd-d4fc-485f-8613-5af88bfcfcdc}' -> 5
+00:00:00.046069 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046070 main     1542: create key '{97c78fcd-d4fc-485f-8613-5af88bfcfcdc}'(/Default='IVBoxSVCAvailabilityChangedEvent') -> 5
+00:00:00.046145 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046146 main     1542: create key '{6bb335cc-1c58-440c-bb7b-3a1397284c7b}' -> 5
+00:00:00.046147 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046147 main     1542: create key '{6bb335cc-1c58-440c-bb7b-3a1397284c7b}'(/Default='IStorageControllerChangedEvent') -> 5
+00:00:00.046223 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046224 main     1542: create key '{4ee3cbcb-486f-40db-9150-deee3fd24189}' -> 5
+00:00:00.046224 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046225 main     1542: create key '{4ee3cbcb-486f-40db-9150-deee3fd24189}'(/Default='IGuestFileReadEvent') -> 5
+00:00:00.046303 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046304 main     1542: create key '{aac6c7cb-a371-4c58-ab51-0616896b2f2c}' -> 5
+00:00:00.046305 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046305 main     1542: create key '{aac6c7cb-a371-4c58-ab51-0616896b2f2c}'(/Default='ISystemProperties') -> 5
+00:00:00.046384 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046386 main     1542: create key '{243829cb-15b7-42a4-8664-7aa4e34993da}' -> 5
+00:00:00.046386 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046387 main     1542: create key '{243829cb-15b7-42a4-8664-7aa4e34993da}'(/Default='IUpdateAgentAvailableEvent') -> 5
+00:00:00.046466 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046467 main     1542: create key '{a54d9cca-f23f-11ea-9755-efd0f1f792d9}' -> 5
+00:00:00.046467 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046468 main     1542: create key '{a54d9cca-f23f-11ea-9755-efd0f1f792d9}'(/Default='ICloudProviderListChangedEvent') -> 5
+00:00:00.046546 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046547 main     1542: create key '{3890b2c8-604d-11e9-92d3-53cb473db9fb}' -> 5
+00:00:00.046547 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046548 main     1542: create key '{3890b2c8-604d-11e9-92d3-53cb473db9fb}'(/Default='IStringArray') -> 5
+00:00:00.046625 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046626 main     1542: create key '{147816c8-17e0-11eb-81fa-87cea6263e1a}' -> 5
+00:00:00.046627 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046628 main     1542: create key '{147816c8-17e0-11eb-81fa-87cea6263e1a}'(/Default='ICloudMachine') -> 5
+00:00:00.046708 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046709 main     1542: create key '{4da2dec7-71b2-4817-9a64-4ed12c17388e}' -> 5
+00:00:00.046710 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046711 main     1542: create key '{4da2dec7-71b2-4817-9a64-4ed12c17388e}'(/Default='ICPUChangedEvent') -> 5
+00:00:00.046793 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046794 main     1542: create key '{11be93c7-a862-4dc9-8c89-bf4ba74a886a}' -> 5
+00:00:00.046795 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046795 main     1542: create key '{11be93c7-a862-4dc9-8c89-bf4ba74a886a}'(/Default='IMediumFormat') -> 5
+00:00:00.046873 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046874 main     1542: create key '{ff5befc3-4ba3-7903-2aa4-43988ba11554}' -> 5
+00:00:00.046874 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046875 main     1542: create key '{ff5befc3-4ba3-7903-2aa4-43988ba11554}'(/Default='IDnDTarget') -> 5
+00:00:00.046949 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046950 main     1542: create key '{70e2e0c3-332c-4d72-b822-2db16e2cb31b}' -> 5
+00:00:00.046951 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.046951 main     1542: create key '{70e2e0c3-332c-4d72-b822-2db16e2cb31b}'(/Default='IHostDrive') -> 5
+00:00:00.047028 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047029 main     1542: create key '{48c7f4c0-c9d6-4742-957c-a6fd52e8c4ae}' -> 5
+00:00:00.047030 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047030 main     1542: create key '{48c7f4c0-c9d6-4742-957c-a6fd52e8c4ae}'(/Default='IBandwidthControl') -> 5
+00:00:00.047105 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047106 main     1542: create key '{92f21dc0-44de-1653-b717-2ebf0ca9b664}' -> 5
+00:00:00.047107 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047107 main     1542: create key '{92f21dc0-44de-1653-b717-2ebf0ca9b664}'(/Default='IGuestFile') -> 5
+00:00:00.047181 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047182 main     1542: create key '{245d88bd-800a-40f8-87a6-170d02249a55}' -> 5
+00:00:00.047183 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047183 main     1542: create key '{245d88bd-800a-40f8-87a6-170d02249a55}'(/Default='IExtraDataCanChangeEvent') -> 5
+00:00:00.047259 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047260 main     1542: create key '{0ca2adba-8f30-401b-a8cd-fe31dbe839c0}' -> 5
+00:00:00.047260 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047261 main     1542: create key '{0ca2adba-8f30-401b-a8cd-fe31dbe839c0}'(/Default='IEvent') -> 5
+00:00:00.047339 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047341 main     1542: create key '{6a5e65ba-eeb9-11ea-ae38-73242bc0f172}' -> 5
+00:00:00.047341 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047342 main     1542: create key '{6a5e65ba-eeb9-11ea-ae38-73242bc0f172}'(/Default='ICloudProfileRegisteredEvent') -> 5
+00:00:00.047418 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047419 main     1542: create key '{b1d978b8-f7b7-4b05-900e-2a9253c00f51}' -> 5
+00:00:00.047420 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047420 main     1542: create key '{b1d978b8-f7b7-4b05-900e-2a9253c00f51}'(/Default='ICloudProfile') -> 5
+00:00:00.047496 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047497 main     1542: create key '{41a033b8-cc87-4f6e-a0e9-47bb7f2d4be5}' -> 5
+00:00:00.047497 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047498 main     1542: create key '{41a033b8-cc87-4f6e-a0e9-47bb7f2d4be5}'(/Default='IInternalProgressControl') -> 5
+00:00:00.047572 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047573 main     1542: create key '{e7932cb8-f6d4-4ab6-9cbf-558eb8959a6a}' -> 5
+00:00:00.047574 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047574 main     1542: create key '{e7932cb8-f6d4-4ab6-9cbf-558eb8959a6a}'(/Default='IEventSourceChangedEvent') -> 5
+00:00:00.047648 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047649 main     1542: create key '{d134c6b6-4479-430d-bb73-68a452ba3e67}' -> 5
+00:00:00.047650 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047650 main     1542: create key '{d134c6b6-4479-430d-bb73-68a452ba3e67}'(/Default='IUefiVariableStore') -> 5
+00:00:00.047730 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047732 main     1542: create key '{ee37afb5-7002-4786-a5c4-a9c29e1cce75}' -> 5
+00:00:00.047732 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047733 main     1542: create key '{ee37afb5-7002-4786-a5c4-a9c29e1cce75}'(/Default='IMachineGroupsChangedEvent') -> 5
+00:00:00.047808 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047809 main     1542: create key '{b66349b5-3534-4239-b2de-8e1535d94c0b}' -> 5
+00:00:00.047809 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047810 main     1542: create key '{b66349b5-3534-4239-b2de-8e1535d94c0b}'(/Default='ISharedFolderChangedEvent') -> 5
+00:00:00.047885 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047886 main     1542: create key '{f4d803b4-9b2d-4377-bfe6-9702e881516b}' -> 5
+00:00:00.047886 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047887 main     1542: create key '{f4d803b4-9b2d-4377-bfe6-9702e881516b}'(/Default='ISnapshotRestoredEvent') -> 5
+00:00:00.047961 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047962 main     1542: create key '{1d89e2b3-c6ea-45b6-9d43-dc6f70cc9f02}' -> 5
+00:00:00.047963 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.047963 main     1542: create key '{1d89e2b3-c6ea-45b6-9d43-dc6f70cc9f02}'(/Default='IGuestProcessRegisteredEvent') -> 5
+00:00:00.048039 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048040 main     1542: create key '{0b3cdeb2-808e-11e9-b773-133d9330f849}' -> 5
+00:00:00.048040 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048041 main     1542: create key '{0b3cdeb2-808e-11e9-b773-133d9330f849}'(/Default='IGuestMonitorInfoChangedEvent') -> 5
+00:00:00.048115 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048116 main     1542: create key '{c8adb7b0-057d-4391-b928-f14b06b710c5}' -> 5
+00:00:00.048117 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048117 main     1542: create key '{c8adb7b0-057d-4391-b928-f14b06b710c5}'(/Default='IGuestFileEvent') -> 5
+00:00:00.048192 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048193 main     1542: create key '{adf292b0-92c9-4a77-9d35-e058b39fe0b9}' -> 5
+00:00:00.048193 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048194 main     1542: create key '{adf292b0-92c9-4a77-9d35-e058b39fe0b9}'(/Default='ICanShowWindowEvent') -> 5
+00:00:00.048268 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048270 main     1542: create key '{8d095cb0-0126-43e0-b05d-326e74abb356}' -> 5
+00:00:00.048270 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048271 main     1542: create key '{8d095cb0-0126-43e0-b05d-326e74abb356}'(/Default='IMediumAttachment') -> 5
+00:00:00.048344 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048346 main     1542: create key '{20479eaf-d8ed-44cf-85ac-c83a26c95a4d}' -> 5
+00:00:00.048346 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048347 main     1542: create key '{20479eaf-d8ed-44cf-85ac-c83a26c95a4d}'(/Default='IToken') -> 5
+00:00:00.048421 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048423 main     1542: create key '{300763af-5d6b-46e6-aa96-273eac15538a}' -> 5
+00:00:00.048423 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048424 main     1542: create key '{300763af-5d6b-46e6-aa96-273eac15538a}'(/Default='IMachine') -> 5
+00:00:00.048498 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048499 main     1542: create key '{abef51ae-1493-49f4-aa03-efaf106bf086}' -> 5
+00:00:00.048499 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048500 main     1542: create key '{abef51ae-1493-49f4-aa03-efaf106bf086}'(/Default='IUpdateAgentSettingsChangedEvent') -> 5
+00:00:00.048574 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048575 main     1542: create key '{b14290ad-cd54-400c-b858-797bcb82570e}' -> 5
+00:00:00.048576 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048576 main     1542: create key '{b14290ad-cd54-400c-b858-797bcb82570e}'(/Default='IPerformanceCollector') -> 5
+00:00:00.048650 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048651 main     1542: create key '{758d7eac-e4b1-486a-8f2e-747ae346c3e9}' -> 5
+00:00:00.048651 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048652 main     1542: create key '{758d7eac-e4b1-486a-8f2e-747ae346c3e9}'(/Default='IDirectory') -> 5
+00:00:00.048733 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048734 main     1542: create key '{59a235ac-2f1a-4d6c-81fc-e3fa843f49ae}' -> 5
+00:00:00.048734 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048735 main     1542: create key '{59a235ac-2f1a-4d6c-81fc-e3fa843f49ae}'(/Default='IFile') -> 5
+00:00:00.048810 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(857) long __cdecl vbpsCreateRegKeyA(struct VBPSREGSTATE *,struct HKEY__ *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048811 main     1542: create key '{726eaca9-091e-41b4-bca6-355efe864107}' -> 5
+00:00:00.048812 main     AssertLogRel D:\tinderboxa\win-7.0\src\VBox\Main\src-all\win\VBoxProxyStub.c(952) long __cdecl vbpsCreateRegKeyWithDefaultValueAAEx(struct VBPSREGSTATE *,struct HKEY__ *,const char *,const char *,struct HKEY__ **,unsigned int): VBPS_LOGREL_NO_ASSERT(lrc == ERROR_ACCESS_DENIED)
+00:00:00.048812 main     1542: create key '{726eaca9-091e-41b4-bca6-355ef
+[DROP DROP DROP]
+00:00:12.007100 main     VirtualBox: object deletion starts
+00:00:12.009318 main     HostDnsMonitor: shutting down ...
+00:00:12.009440 main     HostDnsMonitor: shut down
+00:00:12.013805 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:00:12.015749 main     VirtualBox: object deleted
