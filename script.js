@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuNav.classList.toggle('mostrar');
     });
 });
-
-
-
+  
 // huevo de pascua 1
 var audio = null;
 
