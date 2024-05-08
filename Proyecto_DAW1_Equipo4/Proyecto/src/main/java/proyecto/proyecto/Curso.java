@@ -9,58 +9,59 @@ package proyecto.proyecto;
  * @author DAW114
  */
 public class Curso {
-    int id;
-    String descripcion;
-    boolean activo;
-    String tipo;
-    String codigo;
 
-    public Curso(int id, String descripcion, boolean activo, String tipo, String codigo) {
+    int id;
+    String codigo;
+    String descripcion;
+    Etapa etapa;
+    boolean activo;
+
+    public Curso(int id, String codigo, String descripcion, Etapa etapa, boolean activo) {
         this.id = id;
-        this.descripcion = descripcion;
-        this.activo = activo;
-        this.tipo = tipo;
         this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.etapa = etapa;
+        this.activo = activo;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public String getTipo() {
-        return tipo;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCodigo() {
         return codigo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
+    public Etapa getEtapa() {
+        return etapa;
+    }
+
+    public void setEtapa(Etapa etapa) {
+        this.etapa = etapa;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-    
 }

@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author DAW114
  */
-public class ProfesorDAOImp implements Repositorio<Profesor> {
+public class CursoDAOImp implements Repositorio<Curso> {
 
     // metodo privado que nos devuelve la conexión
     private Connection getConnection() {
@@ -25,12 +25,12 @@ public class ProfesorDAOImp implements Repositorio<Profesor> {
 
     // recuperamos todos los registros de la bd
     @Override
-    public List<Profesor> listar() {
-        List<Profesor> profesores = new ArrayList<>();
-        try (Statement stmt = getConnection().createStatement(); ResultSet rs = stmt.executeQuery("SELECT id,dni,apellidos,nombre,correo_institucional,id_departamento,activo FROM profesor");) {
+    public List<Curso> listar() {
+        List<Curso> cursos = new ArrayList<>();
+        try (Statement stmt = getConnection().createStatement(); ResultSet rs = stmt.executeQuery("SELECT * FROM curso");) {
             while (rs.next()) {
-                Profesor profesor = crearProfesor(rs);
-                if (!profesores.add(profesor)) {
+                Curso curso = crearCurso(rs);
+                if (!cursos.add(curso)) {
                     throw new Exception("error no se ha insertado el objeto en la colección");
                 }
             }
@@ -41,19 +41,19 @@ public class ProfesorDAOImp implements Repositorio<Profesor> {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-        return profesores;
+        return cursos;
     }
 
     // recuperamos objeto por clave primaria
     @Override
-    public Profesor porId(int id) {
-        Profesor profesor = null;
-        String sql = "SELECT * FROM profesor WHERE id=?";
+    public Curso porId(int id) {
+        Curso curso = null;
+        String sql = "SELECT * FROM curso WHERE id=?";
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
             stmt.setInt(1, id);
             try (ResultSet rs = stmt.executeQuery();) {
                 if (rs.next()) {
-                    profesor = crearProfesor(rs);
+                    curso = crearCurso(rs);
                 }
             }
 
@@ -61,30 +61,28 @@ public class ProfesorDAOImp implements Repositorio<Profesor> {
             // errores
             System.out.println("SQLException: " + ex.getMessage());
         }
-        return profesor;
+        return curso;
     }
 
     // implementa tanto insertar como modificar
     // distinguimos que es una inserción porque el id en la tabla se genera automáticamente
     @Override
-    public void guardar(Profesor profesor) {
+    public void guardar(Curso curso) {
         String sql = null;
-        if (profesor.getId() > 0) {
-            sql = "UPDATE profesor SET dni=?,apellidos=?,nombre=?,correo_institucional=?,id_departamento=?,activo=? WHERE id=?";
+        if (curso.getId() > 0) {
+            sql = "UPDATE curso SET activo=?,descripcion=?,codigo=?,etapa=? WHERE id=?";
         } else {
-            sql = "INSERT INTO profesor(dni,apellidos,nombre,correo_institucional,id_departamento,activo) VALUES (?,?,?,?,?,?)";
+            sql = "INSERT INTO curso(activo,descripcion,codigo,etapa) VALUES (?,?,?,?)";
         }
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
 
-            if (profesor.getId() > 0) {
-                stmt.setInt(7, profesor.getId());
+            if (curso.getId() > 0) {
+                stmt.setInt(5, curso.getId());
             }
-            stmt.setString(1, profesor.getDni());
-            stmt.setString(2, profesor.getApellidos());
-            stmt.setString(3, profesor.getNombre());
-            stmt.setString(4, profesor.getCorreoElectronico());
-            stmt.setInt(5, profesor.getCodigoDepartamento());
-            stmt.setString(6, profesor.getEstado().toString());
+            stmt.setBoolean(1, curso.isActivo());
+            stmt.setString(2, curso.getDescripcion());
+            stmt.setString(3, curso.getCodigo());
+            stmt.setString(4, curso.getEtapa().name());
             int salida = stmt.executeUpdate();
             if (salida != 1) {
                 throw new Exception(" No se ha insertado/modificado un solo registro");
@@ -102,7 +100,7 @@ public class ProfesorDAOImp implements Repositorio<Profesor> {
     @Override
     public void eliminar(int id) {
 
-        String sql = "DELETE FROM profesor WHERE id=?";
+        String sql = "DELETE FROM curso WHERE id=?";
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
             stmt.setInt(1, id);
             int salida = stmt.executeUpdate();
@@ -117,7 +115,8 @@ public class ProfesorDAOImp implements Repositorio<Profesor> {
         }
     }
 
-    private Profesor crearProfesor(final ResultSet rs) throws SQLException {
-        return new Profesor(rs.getInt("id"), rs.getString("dni"), rs.getString("apellidos"), rs.getString("nombre"), rs.getString("correo_institucional"), rs.getInt("id_departamento"), false, false, EstadoProfesor.Activo);
+    private Curso crearCurso(final ResultSet rs) throws SQLException {
+        return new Curso(rs.getInt("id"), rs.getString("codigo"), rs.getString("descripcion"), Etapa.valueOf(rs.getString("etapa")), rs.getBoolean("activo"));
     }
+
 }
