@@ -4,6 +4,8 @@
  */
 package proyecto.proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DAW114
@@ -15,6 +17,9 @@ public class Interfaz extends javax.swing.JFrame {
      */
     public Interfaz() {
         initComponents();
+        InicioSesion.setVisible(true);
+        CambiarContraseña.setVisible(false);
+        CrearProfesor.setVisible(false);
     }
 
     /**
@@ -26,43 +31,374 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Usuario = new javax.swing.JButton();
+        InicioSesion = new javax.swing.JPanel();
+        inicio = new javax.swing.JLabel();
+        contraseña = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
+        txtContraseña = new javax.swing.JPasswordField();
+        email = new javax.swing.JLabel();
+        acceder = new javax.swing.JButton();
+        restablecerBoton = new javax.swing.JButton();
+        CambiarContraseña = new javax.swing.JPanel();
+        cambiocontraseña = new javax.swing.JLabel();
+        contraseña1 = new javax.swing.JLabel();
+        txtEmailCambioContraseña = new javax.swing.JTextField();
+        txtContraseñaCambioContraseña = new javax.swing.JPasswordField();
+        emailCambioContraseña = new javax.swing.JLabel();
+        cambiar = new javax.swing.JButton();
+        volverContraseña = new javax.swing.JButton();
+        CrearProfesor = new javax.swing.JPanel();
+        cambiocontraseña1 = new javax.swing.JLabel();
+        contraseña2 = new javax.swing.JLabel();
+        txtEmailCambioContraseña1 = new javax.swing.JTextField();
+        txtContraseñaCambioContraseña1 = new javax.swing.JPasswordField();
+        emailCambioContraseña1 = new javax.swing.JLabel();
+        cambiar1 = new javax.swing.JButton();
+        volverContraseña1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Usuario.setText("Usuario");
-        Usuario.setToolTipText("");
-        Usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Usuario.addActionListener(new java.awt.event.ActionListener() {
+        inicio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        inicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        inicio.setText("Inicio de Sesión");
+        inicio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        inicio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        contraseña.setText("Contraseña");
+
+        txtEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsuarioActionPerformed(evt);
+                txtEmailActionPerformed(evt);
             }
         });
+
+        txtContraseña.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtContraseña.setMinimumSize(new java.awt.Dimension(0, 0));
+        txtContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContraseñaActionPerformed(evt);
+            }
+        });
+
+        email.setText("Email");
+
+        acceder.setText("Acceder");
+        acceder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        acceder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                accederActionPerformed(evt);
+            }
+        });
+
+        restablecerBoton.setText("Restablecer Contraseña");
+        restablecerBoton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        restablecerBoton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        restablecerBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restablecerBotonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout InicioSesionLayout = new javax.swing.GroupLayout(InicioSesion);
+        InicioSesion.setLayout(InicioSesionLayout);
+        InicioSesionLayout.setHorizontalGroup(
+            InicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(InicioSesionLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(InicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(contraseña)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(InicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(inicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtEmail)
+                    .addComponent(acceder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(restablecerBoton, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
+        );
+        InicioSesionLayout.setVerticalGroup(
+            InicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InicioSesionLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(inicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addGroup(InicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(email)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(InicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(contraseña)
+                    .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addComponent(acceder, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(restablecerBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+        );
+
+        inicio.getAccessibleContext().setAccessibleParent(cambiocontraseña);
+
+        cambiocontraseña.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cambiocontraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cambiocontraseña.setText("Restablecer Contraseña");
+        cambiocontraseña.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        contraseña1.setText("Nueva Contraseña");
+
+        txtEmailCambioContraseña.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEmailCambioContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailCambioContraseñaActionPerformed(evt);
+            }
+        });
+
+        txtContraseñaCambioContraseña.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtContraseñaCambioContraseña.setMinimumSize(new java.awt.Dimension(0, 0));
+        txtContraseñaCambioContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContraseñaCambioContraseñaActionPerformed(evt);
+            }
+        });
+
+        emailCambioContraseña.setText("Email");
+
+        cambiar.setText("Cambiar");
+        cambiar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cambiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarActionPerformed(evt);
+            }
+        });
+
+        volverContraseña.setText("Volver");
+        volverContraseña.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        volverContraseña.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        volverContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverContraseñaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CambiarContraseñaLayout = new javax.swing.GroupLayout(CambiarContraseña);
+        CambiarContraseña.setLayout(CambiarContraseñaLayout);
+        CambiarContraseñaLayout.setHorizontalGroup(
+            CambiarContraseñaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CambiarContraseñaLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(CambiarContraseñaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(contraseña1)
+                    .addComponent(emailCambioContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(CambiarContraseñaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cambiocontraseña, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtContraseñaCambioContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtEmailCambioContraseña)
+                    .addComponent(cambiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(volverContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(77, 77, 77))
+        );
+        CambiarContraseñaLayout.setVerticalGroup(
+            CambiarContraseñaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CambiarContraseñaLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(cambiocontraseña)
+                .addGap(66, 66, 66)
+                .addGroup(CambiarContraseñaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailCambioContraseña)
+                    .addComponent(txtEmailCambioContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(CambiarContraseñaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CambiarContraseñaLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(contraseña1))
+                    .addComponent(txtContraseñaCambioContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addComponent(cambiar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(volverContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+        );
+
+        cambiocontraseña1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cambiocontraseña1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cambiocontraseña1.setText("Restablecer Contraseña");
+        cambiocontraseña1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        contraseña2.setText("Nueva Contraseña");
+
+        txtEmailCambioContraseña1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEmailCambioContraseña1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailCambioContraseña1ActionPerformed(evt);
+            }
+        });
+
+        txtContraseñaCambioContraseña1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtContraseñaCambioContraseña1.setMinimumSize(new java.awt.Dimension(0, 0));
+        txtContraseñaCambioContraseña1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContraseñaCambioContraseña1ActionPerformed(evt);
+            }
+        });
+
+        emailCambioContraseña1.setText("Email");
+
+        cambiar1.setText("Cambiar");
+        cambiar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cambiar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiar1ActionPerformed(evt);
+            }
+        });
+
+        volverContraseña1.setText("Volver");
+        volverContraseña1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        volverContraseña1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        volverContraseña1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverContraseña1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CrearProfesorLayout = new javax.swing.GroupLayout(CrearProfesor);
+        CrearProfesor.setLayout(CrearProfesorLayout);
+        CrearProfesorLayout.setHorizontalGroup(
+            CrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CrearProfesorLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(CrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(contraseña2)
+                    .addComponent(emailCambioContraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(CrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cambiocontraseña1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtContraseñaCambioContraseña1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtEmailCambioContraseña1)
+                    .addComponent(cambiar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(volverContraseña1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(77, 77, 77))
+        );
+        CrearProfesorLayout.setVerticalGroup(
+            CrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearProfesorLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(cambiocontraseña1)
+                .addGap(66, 66, 66)
+                .addGroup(CrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailCambioContraseña1)
+                    .addComponent(txtEmailCambioContraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(CrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CrearProfesorLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(contraseña2))
+                    .addComponent(txtContraseñaCambioContraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addComponent(cambiar1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(volverContraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(124, Short.MAX_VALUE))
+            .addComponent(InicioSesion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(CambiarContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(CrearProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(237, Short.MAX_VALUE)
-                .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(InicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(CambiarContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(CrearProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioActionPerformed
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
-        Usuario.
-    }//GEN-LAST:event_UsuarioActionPerformed
+    }//GEN-LAST:event_txtEmailActionPerformed
+    
+    private void accederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accederActionPerformed
+        // TODO add your handling code here:
+        String username = txtEmail.getText();
+        String password = new String(txtContraseña.getPassword());
+        if (username.equals("usuario") && password.equals("contraseña")) {
+            JOptionPane.showMessageDialog(this, "Has iniciado sesion");
+            Interfaz login = new Interfaz();
+            login.setVisible(true);
+            dispose(); // Cierra la ventana de inicio de sesión
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos. Inténtelo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_accederActionPerformed
+    
+    private void txtContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContraseñaActionPerformed
+
+    private void restablecerBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restablecerBotonActionPerformed
+        // TODO add your handling code here:
+        InicioSesion.setVisible(false);
+        CambiarContraseña.setVisible(true);
+    }//GEN-LAST:event_restablecerBotonActionPerformed
+
+    private void txtEmailCambioContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailCambioContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailCambioContraseñaActionPerformed
+
+    private void txtContraseñaCambioContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaCambioContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContraseñaCambioContraseñaActionPerformed
+
+    private void cambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cambiarActionPerformed
+
+    private void volverContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverContraseñaActionPerformed
+        // TODO add your handling code here:
+        InicioSesion.setVisible(true);
+        CambiarContraseña.setVisible(false);
+    }//GEN-LAST:event_volverContraseñaActionPerformed
+
+    private void txtEmailCambioContraseña1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailCambioContraseña1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailCambioContraseña1ActionPerformed
+
+    private void txtContraseñaCambioContraseña1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaCambioContraseña1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContraseñaCambioContraseña1ActionPerformed
+
+    private void cambiar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cambiar1ActionPerformed
+
+    private void volverContraseña1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverContraseña1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_volverContraseña1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,6 +436,29 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Usuario;
+    private javax.swing.JPanel CambiarContraseña;
+    private javax.swing.JPanel CrearProfesor;
+    private javax.swing.JPanel InicioSesion;
+    private javax.swing.JButton acceder;
+    private javax.swing.JButton cambiar;
+    private javax.swing.JButton cambiar1;
+    private javax.swing.JLabel cambiocontraseña;
+    private javax.swing.JLabel cambiocontraseña1;
+    private javax.swing.JLabel contraseña;
+    private javax.swing.JLabel contraseña1;
+    private javax.swing.JLabel contraseña2;
+    private javax.swing.JLabel email;
+    private javax.swing.JLabel emailCambioContraseña;
+    private javax.swing.JLabel emailCambioContraseña1;
+    private javax.swing.JLabel inicio;
+    private javax.swing.JButton restablecerBoton;
+    private javax.swing.JPasswordField txtContraseña;
+    private javax.swing.JPasswordField txtContraseñaCambioContraseña;
+    private javax.swing.JPasswordField txtContraseñaCambioContraseña1;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtEmailCambioContraseña;
+    private javax.swing.JTextField txtEmailCambioContraseña1;
+    private javax.swing.JButton volverContraseña;
+    private javax.swing.JButton volverContraseña1;
     // End of variables declaration//GEN-END:variables
 }
