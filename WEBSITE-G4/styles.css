@@ -196,14 +196,8 @@ nav ul li a.pagina-actual::after {
 
 .galeria img {
   width: 100%;
-  height:auto  ;
+  height:auto ; /*para que las imagenes simpre midan lo mismo pon 200px pero pierden la calidad de las imagenes */
   object-fit: cover;
-}
-#foto-aerea {
-    
-    height:200px ;
-  
-    
 }
 
 /*Fin galería*/
