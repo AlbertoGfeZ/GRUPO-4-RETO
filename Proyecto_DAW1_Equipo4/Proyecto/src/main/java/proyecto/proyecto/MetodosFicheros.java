@@ -83,9 +83,8 @@ public class MetodosFicheros {
                     int id = Integer.parseInt(datoslinea[0]);
                     String codigo = datoslinea[1];
                     String nombre = datoslinea[2];
-                    String jefeDepartamento = datoslinea[3];
 
-                    Departamento d = new Departamento(id, codigo, nombre, jefeDepartamento);
+                    Departamento d = new Departamento(id, nombre, null, codigo);
                     lista.add(d);
                 }
                 fr.close();

@@ -19,9 +19,9 @@ public class AccesoBaseDatos {
     private Connection conn = null; //atributo conexión
     // constantes a definir
     private static final String BD = "proyecto";
-    private static final String USUARIO = "conexion";
-    private static final String CLAVE = "conexion";
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/" + BD;
+    private static final String USUARIO = "vboxuser";
+    private static final String CLAVE = "changeme";
+    private static final String URL = "jdbc:mysql://10.0.10.200/" + BD;
 
     private AccesoBaseDatos() {
 

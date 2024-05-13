@@ -72,7 +72,7 @@ public class GrupoDAOImp implements Repositorio<Grupo> {
         if (grupo.getId() > 0) {
             sql = "UPDATE grupo SET activo=?,numero_alumnos=?,codigo=?,idcurso=? WHERE id=?";
         } else {
-            sql = "INSERT INTO grupo(activo,numero_alumnos,codigo,idcurso) VALUES (?,?)";
+            sql = "INSERT INTO grupo(activo,numero_alumnos,codigo,idcurso) VALUES (?,?,?,?)";
         }
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
 
