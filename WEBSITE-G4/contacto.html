@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="contenido-cabecera">
+      <a href="./index.html">
+        <h1 class="titulo-header">Actividades Extraescolares</h1>
+      </a>
+      <nav>
+        <div class="contenido-nav">
+          <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./Actividades.html">Actividades</a></li>
+            <li>
+              <a href="./contacto.html" class="pagina-actual">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <label class="menu-hamburguesa">
+          <input type="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path class="linea linea-arriba-abajo"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+            </path>
+            <path class="linea" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="contenedor">
+      <div class="izquierda">
+        <h2>Dejanos tus datos</h2>
+        <p>Por favor, completa el siguiente formulario:</p>
+        <form id="miFormulario" action="https://formsubmit.co/hugo.coliosantamaria@iesmiguelherrero.com" method="POST">
+          <label for="nombre" class="floating-label">Nombre y Apellido:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
+
+          <label for="telefono" class="floating-label">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="123-456-789" pattern="[0-9]{9}" maxlength="9"
+            required />
+
+          <label for="correo" class="floating-label">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@dominio.com" required />
+
+          <label for="mensaje" class="floating-label">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+          <label for="terminos" class="terminos-label">
+            <input type="checkbox" id="terminos" name="terminos" required />
+            <strong>Acepto los
+              <a href="./Términos y Condiciones.html" target="_blank">Términos y condiciones</a></strong> </label><br />
+          <button type="submit" class="boton-enviar">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <img src="./contenido/imagenes/mensaje.png" alt="" />
+              </div>
+            </div>
+            <span>Enviar</span>
+          </button>
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_autoresponse"
+            value="El correo ha sido entregado con éxito gracias por contactarnos. Le responderemos cuanto antes." />
+          <input type="hidden" name="_subject" value="¡Nuevo envío!" />
+          <input type="hidden" name="_template" value="table" />
+        </form>
+      </div>
+      <div class="derecha">
+        <h2>Contactanos</h2>
+        <p>¡Estamos aquí para ayudarte!</p>
+        <p><strong>Teléfono:</strong> 942 88 24 98</p>
+        <p>
+          <strong>Correo electrónico:</strong>
+          ies.miguel.herrero.pereda@educantabria.es
+        </p>
+        <p>
+          <strong>Dirección:</strong> P.º de Julio Hauzeur, 59, 39300
+          Torrelavega, Cantabria
+        </p>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5802.350231017629!2d-4.067372509902421!3d43.35244749737057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd493e18f1f29733%3A0x1420ebdf20460746!2sIES%20Miguel%20Herrero%20Pereda!5e0!3m2!1ses!2ses!4v1714331975810!5m2!1ses!2ses"
+            width="100%" height="575" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="contenedor">
+      <div class="SobreNosotros">
+        <h2>Sobre nosotros</h2>
+        <p>
+          El Miguel Herrero de Torrelavega ofrece una educación integral y de
+          calidad que abarca desde la Educación Secundaria Obligatoria hasta
+          el Bachillerato, así como también grados medios y superiores.
+          Destaca por su compromiso con la excelencia académica, valores como
+          el respeto y la responsabilidad, y una amplia variedad de
+          actividades extracurriculares.
+        </p>
+        <ul class="sci">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100087928148760"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/school/ies-miguel-herrero-pereda/"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ies.miguelherrero/"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="Ayuda">
+        <h2>Horario</h2>
+        <p>9:00h - 14:00h</p>
+      </div>
+
+      <div class="Enlaces">
+        <h2>Enlaces</h2>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Actividades</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+
+      <div class="Contactanos">
+        <h2>Contactanos</h2>
+        <ul class="info">
+          <li>
+            <span><i class="fa-solid fa-phone"></i></span>
+            <p><a href="#">942 88 24 98</a></p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <p>
+              <a href="mailto:ies.miguel.herrero.pereda@educantabria.es">ies.miguel.herrero.pereda@educantabria.es</a>
+            </p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <p><a href="#">Dirección</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copyrightText">
+    <p>Copyright ©2024 IES Miguel Herrero. Todos los derechos reservados.</p>
+  </div>
+</body>
+
+</html>
