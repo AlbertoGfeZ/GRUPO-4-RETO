@@ -32,9 +32,9 @@ public class MetodosFicheros {
     }
 
     //Metodo que lee cursos.csv y los inserta en una lista
-    public static List<Curso> leerCSVCursos() {
+    public List<Curso> leerCSVCursos(String link) {
         List<Curso> lista = new ArrayList<>();
-        File fichero = new File("D:\\Usuarios\\DAW114\\Documents\\Proyecto_DAW1_Equipo4\\cursos.csv");
+        File fichero = new File(link);
         FileReader fr;
         String linea = "";
         try {
@@ -67,9 +67,9 @@ public class MetodosFicheros {
     }
     //Metodo que lee departamentos.csv y los inserta en una lista
 
-    public static List<Departamento> leerCSVDepartamentos() {
+    public List<Departamento> leerCSVDepartamentos(String link) {
         List<Departamento> lista = new ArrayList<>();
-        File fichero = new File("D:\\Usuarios\\DAW114\\Documents\\Proyecto_DAW1_Equipo4\\departamentos.csv");
+        File fichero = new File(link);
         FileReader fr;
         String linea = "";
         int idJefe = 15;
@@ -101,9 +101,9 @@ public class MetodosFicheros {
     }
 
     //Metodo que lee profesores.csv y los inserta en una lista
-    public static List<Profesor> leerCSVProfesores() {
+    public List<Profesor> leerCSVProfesores(String link) {
         List<Profesor> lista = new ArrayList<>();
-        File fichero = new File("D:\\Usuarios\\DAW114\\Documents\\Proyecto_DAW1_Equipo4\\profesores.csv");
+        File fichero = new File(link);
         FileReader fr;
         String linea = "";
         try {
@@ -136,9 +136,9 @@ public class MetodosFicheros {
     }
 
     //Metodo que lee grupos.csv y los inserta en una lista
-    public static List<Grupo> leerCSVGrupos() {
+    public List<Grupo> leerCSVGrupos(String link) {
         List<Grupo> lista = new ArrayList<>();
-        File fichero = new File("D:\\Usuarios\\DAW114\\Documents\\Proyecto_DAW1_Equipo4\\grupos.csv");
+        File fichero = new File(link);
         FileReader fr;
         String linea = "";
         try {
