@@ -1,4 +1,4 @@
-# Grupo 4 
+# Grupo 4
 
 En el grupo 4 hemos completado el reto con todos sus requerimientos; página web, java swing, bases de datos, servidores, y GitHub.
 
