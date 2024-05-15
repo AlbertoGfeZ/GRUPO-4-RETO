@@ -4,6 +4,9 @@
  */
 package proyecto.proyecto;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -19,7 +22,28 @@ public class Interfaz extends javax.swing.JFrame {
     private ProfesorDAOImp profesores;
     private MetodosFicheros ficheros;
 
+    public static String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            md.update(password.getBytes());
+            byte[] digest = md.digest();
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : digest) {
+                hexString.append(String.format("%02x", b & 0xff));
+            }
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public Interfaz() {
+        this.profesores = new ProfesorDAOImp();
+        this.cursos = new CursoDAOImp();
+        this.ficheros = new MetodosFicheros();
+        this.grupos = new GrupoDAOImp();
+        this.departamentos = new DepartamentoDAOImp();
         initComponents();
         InicioSesion.setVisible(true);
         CambiarContraseña.setVisible(false);
@@ -2321,7 +2345,14 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
         String username = txtEmailInicio.getText();
         String password = new String(txtContraseñaInicio.getPassword());
-        if (username.equals("usuario") && password.equals("contraseña")) {
+        String encriptada = hashPassword(password);
+        Profesor p = null;
+        for (int i = 0; i < profesores.listar().size(); i++) {
+            if (username.equals(profesores.listar().get(i).getCorreoElectronico()) && encriptada.equals(profesores.listar().get(i).getContraseña())) {
+                p = profesores.listar().get(i);
+            }
+        }
+        if (p != null) {
             JOptionPane.showMessageDialog(this, "Has iniciado sesion");
             InicioSesion.setVisible(false); // Cierra la ventana de inicio de sesión
             Menu.setVisible(true);
@@ -2349,7 +2380,22 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_txtContraseñaCambioContraseñaActionPerformed
 
     private void cambiarContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarContraseñaActionPerformed
-        // TODO add your handling code here:
+        String email = txtEmailCambioContraseña.getText();
+        String password = new String(txtContraseñaCambioContraseña.getPassword());
+        Profesor p = null;
+        for (int i = 0; i < profesores.listar().size(); i++) {
+            if (email.equals(profesores.listar().get(i).getCorreoElectronico())) {
+                p = profesores.listar().get(i);
+            }
+        }
+        if (p != null) {
+            JOptionPane.showMessageDialog(this, "Contraseña modificada");
+            profesores.modificarContraseña(email, password);
+            InicioSesion.setVisible(true); // Cierra la ventana de inicio de sesión
+            CambiarContraseña.setVisible(false);
+        } else {
+            JOptionPane.showMessageDialog(null, "El usuario no existe. Inténtelo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+        }// TODO add your handling code here:
     }//GEN-LAST:event_cambiarContraseñaActionPerformed
 
     private void volverContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverContraseñaActionPerformed
@@ -2707,7 +2753,7 @@ public class Interfaz extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

@@ -4,6 +4,8 @@
  */
 package proyecto.proyecto;
 
+import proyecto.proyecto.Etapa;
+
 /**
  *
  * @author DAW114

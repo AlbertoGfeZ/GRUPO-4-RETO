@@ -12,10 +12,10 @@ public class Departamento {
 
     int id;
     String nombre;
-    Profesor jefeDepartamento;
+    int jefeDepartamento;
     String codigo;
 
-    public Departamento(int id, String nombre, Profesor jefeDepartamento, String codigo) {
+    public Departamento(int id, String nombre, int jefeDepartamento, String codigo) {
         this.id = id;
         this.nombre = nombre;
         this.jefeDepartamento = jefeDepartamento;
@@ -30,7 +30,7 @@ public class Departamento {
         return nombre;
     }
 
-    public Profesor getJefeDepartamento() {
+    public int getJefeDepartamento() {
         return jefeDepartamento;
     }
 
@@ -46,7 +46,7 @@ public class Departamento {
         this.nombre = nombre;
     }
 
-    public void setJefeDepartamento(Profesor jefeDepartamento) {
+    public void setJefeDepartamento(int jefeDepartamento) {
         this.jefeDepartamento = jefeDepartamento;
     }
 

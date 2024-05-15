@@ -4,6 +4,7 @@
  */
 package proyecto.proyecto;
 
+import proyecto.proyecto.EstadoActividad;
 import java.time.LocalDate;
 
 /**

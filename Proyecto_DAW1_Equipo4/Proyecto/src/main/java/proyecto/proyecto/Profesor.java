@@ -4,6 +4,8 @@
  */
 package proyecto.proyecto;
 
+import proyecto.proyecto.EstadoProfesor;
+
 /**
  *
  * @author DAW114
@@ -15,12 +17,13 @@ public class Profesor {
     String apellidos;
     String nombre;
     String correoElectronico;
-    int codigoDepartamento;
+    String contraseña;
+    String codigoDepartamento;
     boolean equipoDirectivo;
     boolean administrador;
     EstadoProfesor estado;
 
-    public Profesor(int id, String dni, String apellidos, String nombre, String correoElectronico, int codigoDepartamento, boolean equipoDirectivo, boolean administrador, EstadoProfesor estado) {
+    public Profesor(int id, String dni, String apellidos, String nombre, String correoElectronico, String contraseña, String codigoDepartamento, boolean equipoDirectivo, boolean administrador, EstadoProfesor estado) {
         this.id = id;
         this.dni = dni;
         this.apellidos = apellidos;
@@ -30,6 +33,7 @@ public class Profesor {
         this.equipoDirectivo = equipoDirectivo;
         this.administrador = administrador;
         this.estado = estado;
+        this.contraseña = contraseña;
     }
 
     public int getId() {
@@ -52,7 +56,11 @@ public class Profesor {
         return correoElectronico;
     }
 
-    public int getCodigoDepartamento() {
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public String getCodigoDepartamento() {
         return codigoDepartamento;
     }
 
@@ -88,7 +96,11 @@ public class Profesor {
         this.correoElectronico = correoElectronico;
     }
 
-    public void setCodigoDepartamento(int codigoDepartamento) {
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public void setCodigoDepartamento(String codigoDepartamento) {
         this.codigoDepartamento = codigoDepartamento;
     }
 
@@ -103,5 +115,5 @@ public class Profesor {
     public void setEstado(EstadoProfesor estado) {
         this.estado = estado;
     }
-    
+
 }

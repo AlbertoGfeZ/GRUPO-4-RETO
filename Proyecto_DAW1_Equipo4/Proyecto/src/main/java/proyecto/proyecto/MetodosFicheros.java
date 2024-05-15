@@ -4,6 +4,13 @@
  */
 package proyecto.proyecto;
 
+import proyecto.proyecto.Grupo;
+import proyecto.proyecto.Curso;
+import proyecto.proyecto.Profesor;
+import proyecto.proyecto.Departamento;
+import proyecto.proyecto.Etapa;
+import proyecto.proyecto.EstadoProfesor;
+import proyecto.proyecto.AccesoBaseDatos;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -84,7 +91,7 @@ public class MetodosFicheros {
                     String codigo = datoslinea[1];
                     String nombre = datoslinea[2];
 
-                    Departamento d = new Departamento(id, nombre, null, codigo);
+                    Departamento d = new Departamento(id, nombre, 0, codigo);
                     lista.add(d);
                 }
                 fr.close();
@@ -117,8 +124,8 @@ public class MetodosFicheros {
                     String nombre = datoslinea[1];
                     String dni = datoslinea[2];
                     String correoElectronico = datoslinea[3];
-                    int codigoDepartamento = Integer.parseInt(datoslinea[4]);
-                    Profesor p = new Profesor(0, dni, apellidos, nombre, correoElectronico, codigoDepartamento, false, false, EstadoProfesor.Activo);
+                    String codigoDepartamento = datoslinea[4];
+                    Profesor p = new Profesor(0, dni, apellidos, nombre, correoElectronico,"", codigoDepartamento, false, false, EstadoProfesor.Activo);
                     lista.add(p);
 
                 }

@@ -70,9 +70,9 @@ public class CursoDAOImp implements Repositorio<Curso> {
     public void guardar(Curso curso) {
         String sql = null;
         if (curso.getId() > 0) {
-            sql = "UPDATE curso SET activo=?,descripcion=?,codigo=?,etapa=? WHERE id=?";
+            sql = "UPDATE curso SET activo=?,descripcion=?,codcurso=?,etapa=? WHERE id=?";
         } else {
-            sql = "INSERT INTO curso(activo,descripcion,codigo,etapa) VALUES (?,?,?,?)";
+            sql = "INSERT INTO curso(activo,descripcion,codcurso,etapa) VALUES (?,?,?,?)";
         }
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
 
@@ -116,7 +116,7 @@ public class CursoDAOImp implements Repositorio<Curso> {
     }
 
     private Curso crearCurso(final ResultSet rs) throws SQLException {
-        return new Curso(rs.getInt("id"), rs.getString("codigo"), rs.getString("descripcion"), Etapa.valueOf(rs.getString("etapa")), rs.getBoolean("activo"));
+        return new Curso(rs.getInt("id"), rs.getString("codcurso"), rs.getString("descripcion"), Etapa.valueOf(rs.getString("etapa")), rs.getBoolean("activo"));
     }
 
 }

@@ -14,8 +14,9 @@ public class Transporte {
     int idEmpresa;
     double precio;
     String descripcion;
+    int idActividad;
 
-    public Transporte(String tipo, int idEmpresa, double precio, String descripcion) {
+    public Transporte(String tipo, int idEmpresa, double precio, String descripcion, int id_actividad) {
         this.tipo = tipo;
         this.idEmpresa = idEmpresa;
         this.precio = precio;

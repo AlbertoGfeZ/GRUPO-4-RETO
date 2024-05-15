@@ -80,7 +80,7 @@ public class DepartamentoDAOImp implements Repositorio<Departamento> {
                 stmt.setInt(4, departamento.getId());
             }
             stmt.setString(1, departamento.getNombre());
-            stmt.setObject(2, departamento.getJefeDepartamento());
+            stmt.setInt(2, departamento.getJefeDepartamento());
             stmt.setString(3, departamento.getCodigo());
             int salida = stmt.executeUpdate();
             if (salida != 1) {
@@ -115,6 +115,6 @@ public class DepartamentoDAOImp implements Repositorio<Departamento> {
     }
 
     private Departamento crearDepartamento(final ResultSet rs) throws SQLException {
-        return new Departamento(rs.getInt("id"), rs.getString("nombre"), (Profesor) rs.getObject("jefedepartamento"), rs.getString("codigo"));
+        return new Departamento(rs.getInt("id"), rs.getString("nombre"), rs.getInt("jefedepartamento"), rs.getString("codigo"));
     }
 }

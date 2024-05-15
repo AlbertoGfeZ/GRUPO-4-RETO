@@ -70,9 +70,9 @@ public class GrupoDAOImp implements Repositorio<Grupo> {
     public void guardar(Grupo grupo) {
         String sql = null;
         if (grupo.getId() > 0) {
-            sql = "UPDATE grupo SET activo=?,numero_alumnos=?,codigo=?,idcurso=? WHERE id=?";
+            sql = "UPDATE grupo SET activo=?,alumnos=?,cod_grupo=?,id_curso=? WHERE id=?";
         } else {
-            sql = "INSERT INTO grupo(activo,numero_alumnos,codigo,idcurso) VALUES (?,?,?,?)";
+            sql = "INSERT INTO grupo(activo,alumnos,cod_grupo,id_curso) VALUES (?,?,?,?)";
         }
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
 
@@ -116,7 +116,7 @@ public class GrupoDAOImp implements Repositorio<Grupo> {
     }
 
     private Grupo crearGrupo(final ResultSet rs) throws SQLException {
-        return new Grupo(rs.getInt("id"), rs.getString("codigo"), rs.getInt("idcurso"), rs.getInt("numero_alumnos"), rs.getBoolean("activo"));
+        return new Grupo(rs.getInt("id"), rs.getString("cod_grupo"), rs.getInt("id_curso"), rs.getInt("alumnos"), rs.getBoolean("activo"));
     }
 
 }
