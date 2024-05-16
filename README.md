@@ -17,3 +17,9 @@ Este proyecto ha sido desarrollado con la contribución y el apoyo de las siguie
 * **[Asier González](https://github.com/asiglez)** Java
 
 Agradecemos sinceramente a todos los que han ayudado a hacer posible este proyecto.
+
+<style>
+a {
+    color: lime; /* Cambia el color de los enlaces*/
+}
+</style>
