@@ -1,8 +1,10 @@
+CREATE DATABASE  IF NOT EXISTS `proyecto` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `proyecto`;
 -- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
 --
--- Host: localhost    Database: proyecto
+-- Host: 10.0.10.200    Database: proyecto
 -- ------------------------------------------------------
--- Server version	8.0.29
+-- Server version	8.0.36-0ubuntu0.22.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,7 +30,7 @@ CREATE TABLE `actividad_programada` (
   `Comentario_Alojamiento` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`Id_Actividad`),
   CONSTRAINT `FK_Actividad_Programada` FOREIGN KEY (`Id_Actividad`) REFERENCES `actividad_solicitada` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='			';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +64,7 @@ CREATE TABLE `actividad_solicitada` (
   PRIMARY KEY (`Id`),
   KEY `FK_Dep_Actividades_idx` (`Departamento`),
   CONSTRAINT `FK_Dep_Actividades` FOREIGN KEY (`Departamento`) REFERENCES `departamento` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,6 +73,7 @@ CREATE TABLE `actividad_solicitada` (
 
 LOCK TABLES `actividad_solicitada` WRITE;
 /*!40000 ALTER TABLE `actividad_solicitada` DISABLE KEYS */;
+INSERT INTO `actividad_solicitada` VALUES (1,1,'2024-01-01','2024-01-01','16:00:00','17:30:00',NULL,1,'Excursion Amazonas','Excursion',0);
 /*!40000 ALTER TABLE `actividad_solicitada` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,9 +89,9 @@ CREATE TABLE `curso` (
   `codCurso` varchar(10) NOT NULL,
   `descripcion` varchar(60) NOT NULL,
   `etapa` varchar(15) NOT NULL,
-  `activo` tinyint NOT NULL,
+  `activo` tinyint NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,6 +100,7 @@ CREATE TABLE `curso` (
 
 LOCK TABLES `curso` WRITE;
 /*!40000 ALTER TABLE `curso` DISABLE KEYS */;
+INSERT INTO `curso` VALUES (1,'DAWEx','Ejemplo curso','primera',0);
 /*!40000 ALTER TABLE `curso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,7 +120,7 @@ CREATE TABLE `departamento` (
   UNIQUE KEY `Codigo_UNIQUE` (`Codigo`),
   KEY `JefeDpto` (`JefeDepartamento`),
   CONSTRAINT `JefeDpto` FOREIGN KEY (`JefeDepartamento`) REFERENCES `profesor` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='	';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,6 +129,7 @@ CREATE TABLE `departamento` (
 
 LOCK TABLES `departamento` WRITE;
 /*!40000 ALTER TABLE `departamento` DISABLE KEYS */;
+INSERT INTO `departamento` VALUES (1,'BIO','Biologia',1);
 /*!40000 ALTER TABLE `departamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,11 +171,11 @@ CREATE TABLE `grupo` (
   `cod_grupo` varchar(20) NOT NULL,
   `id_curso` int NOT NULL,
   `alumnos` int NOT NULL,
-  `activo` tinyint NOT NULL,
+  `activo` tinyint NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `FK_Curso_Grupo_idx` (`id_curso`),
   CONSTRAINT `FK_Curso_Grupo` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -179,6 +184,7 @@ CREATE TABLE `grupo` (
 
 LOCK TABLES `grupo` WRITE;
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
+INSERT INTO `grupo` VALUES (1,'Primero Ex',1,25,0);
 /*!40000 ALTER TABLE `grupo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,7 +290,7 @@ CREATE TABLE `profesor` (
   UNIQUE KEY `Correo_Institucional_UNIQUE` (`Correo_Institucional`),
   KEY `FK_Departamento_Prof_ID_idx` (`cod_departamento`),
   CONSTRAINT `FK_Profesor_Departamento` FOREIGN KEY (`cod_departamento`) REFERENCES `departamento` (`Codigo`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,6 +299,7 @@ CREATE TABLE `profesor` (
 
 LOCK TABLES `profesor` WRITE;
 /*!40000 ALTER TABLE `profesor` DISABLE KEYS */;
+INSERT INTO `profesor` VALUES (1,'Elio','Laguna','1346887L','BIO','eliolagunafernande@eduacantabria.com','ae6e5f2984a4f4a9b9897ebe0c28e40dc644eef00a8d1aa94e00dedddd19107e',1);
 /*!40000 ALTER TABLE `profesor` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -305,7 +312,7 @@ UNLOCK TABLES;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `profesor_BEFORE_INSERT` BEFORE INSERT ON `profesor` FOR EACH ROW BEGIN
-	set new.contraseña=SHA2(new.contraseña,256);
+set new.contraseña=SHA2(new.contraseña,256);
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -350,4 +357,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-16 18:48:59
+-- Dump completed on 2024-05-16 20:14:19
