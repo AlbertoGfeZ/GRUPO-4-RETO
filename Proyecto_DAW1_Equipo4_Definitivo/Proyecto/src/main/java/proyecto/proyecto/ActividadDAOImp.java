@@ -13,6 +13,8 @@ import java.sql.Statement;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  *
@@ -46,6 +48,25 @@ public class ActividadDAOImp implements Repositorio<Actividad> {
         return actividades;
     }
 
+    public SortedSet<Solicitud> listarOrdenado() {
+        SortedSet<Solicitud> solicitudes = new TreeSet<>();
+        try (Statement stmt = getConnection().createStatement(); ResultSet rs = stmt.executeQuery("SELECT * FROM actividad_solicitada");) {
+            while (rs.next()) {
+                Solicitud solicitud = crearSolicitud(rs);
+                if (!solicitudes.add(solicitud)) {
+                    throw new Exception("error no se ha insertado el objeto en la colección");
+                }
+            }
+
+        } catch (SQLException ex) {
+            // errores
+            System.out.println("SQLException: " + ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return solicitudes;
+    }
+
     // recuperamos objeto por clave primaria
     @Override
     public Actividad porId(int id) {
@@ -71,18 +92,13 @@ public class ActividadDAOImp implements Repositorio<Actividad> {
     @Override
     public void guardar(Actividad actividad) {
         String sql = null;
-        if (actividad.getId() > 0) {
-            sql = "UPDATE actividad_programada SET estado=?,comentario_alojamiento WHERE id_actividad=?";
-        } else {
-            sql = "INSERT INTO actividad_programada(estado,comentario_alojamiento,id_actividad) VALUES (?,?,?)";
-        }
+        sql = "INSERT INTO actividad_programada(estado,id_actividad) VALUES (?,?)";
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
 
             if (actividad.getId() > 0) {
-                stmt.setInt(3, actividad.getId());
+                stmt.setInt(2, actividad.getId());
             }
             stmt.setString(1, actividad.getEstado().toString());
-            stmt.setString(2, actividad.getComentario());
             int salida = stmt.executeUpdate();
             if (salida != 1) {
                 throw new Exception(" No se ha insertado/modificado un solo registro");
@@ -157,6 +173,24 @@ public class ActividadDAOImp implements Repositorio<Actividad> {
         return solicitud;
     }
 
+    public Solicitud porTituloSolicitud(String titulo) {
+        Solicitud solicitud = null;
+        String sql = "SELECT * FROM actividad_solicitada WHERE titulo=?";
+        try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
+            stmt.setString(1, titulo);
+            try (ResultSet rs = stmt.executeQuery();) {
+                if (rs.next()) {
+                    solicitud = crearSolicitud(rs);
+                }
+            }
+
+        } catch (SQLException ex) {
+            // errores
+            System.out.println("SQLException: " + ex.getMessage());
+        }
+        return solicitud;
+    }
+
     // implementa tanto insertar como modificar
     // distinguimos que es una inserción porque el id en la tabla se genera automáticamente
     public void guardarSolicitud(Solicitud solicitud) {
@@ -164,7 +198,7 @@ public class ActividadDAOImp implements Repositorio<Actividad> {
         if (solicitud.getId() > 0) {
             sql = "UPDATE actividad_solicitada SET departamento=?,f_ini=?,f_fin=?,h_ini=?,h_ini=?,estado=?,prevista=?,tipo=?,titulo=?,alojamiento=? WHERE id=?";
         } else {
-            sql = "INSERT INTO actividad_solicitada(departamento,f_ini,f_fin,h_ini,h_ini,estado,prevista,tipo,titulo,alojamiento) VALUES (?,?,?,?,?,?,?,?,?,?)";
+            sql = "INSERT INTO actividad_solicitada(departamento,f_ini,f_fin,h_ini,h_fin,estado,prevista,tipo,titulo,alojamiento) VALUES (?,?,?,?,?,?,?,?,?,?)";
         }
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
 
@@ -214,7 +248,7 @@ public class ActividadDAOImp implements Repositorio<Actividad> {
 
     public void modificarComentario(String comentario, int id) {
         String sql = null;
-        sql = "UPDATE actividad_programada SET comentario=? WHERE id_actividad=?";
+        sql = "UPDATE actividad_programada SET comentario_alojamiento=? WHERE id_actividad=?";
 
         try (PreparedStatement stmt = getConnection().prepareStatement(sql);) {
 

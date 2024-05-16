@@ -7,7 +7,12 @@ package proyecto.proyecto;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Iterator;
+import java.util.SortedSet;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -22,6 +27,8 @@ public class Interfaz extends javax.swing.JFrame {
     private ProfesorDAOImp profesores;
     private ActividadDAOImp actividades;
     private MetodosFicheros ficheros;
+    private Actividad actividad;
+    private DefaultTableModel tabla;
 
     public static String hashPassword(String password) {
         try {
@@ -45,6 +52,7 @@ public class Interfaz extends javax.swing.JFrame {
         this.ficheros = new MetodosFicheros();
         this.grupos = new GrupoDAOImp();
         this.departamentos = new DepartamentoDAOImp();
+        this.actividades = new ActividadDAOImp();
         initComponents();
         InicioSesion.setVisible(true);
         CambiarContraseña.setVisible(false);
@@ -66,6 +74,36 @@ public class Interfaz extends javax.swing.JFrame {
         CrearSolicitud.setVisible(false);
         ConsultarSolicitudes.setVisible(false);
         GestionarSolicitudes.setVisible(false);
+        tabla = new DefaultTableModel();
+    }
+
+    private void insertarTablaActividades(SortedSet<Solicitud> lista, JTable tabla1) {
+        tabla = (DefaultTableModel) tabla1.getModel();
+        Object[] ob = new Object[10];
+        Iterator<Solicitud> it = lista.iterator();
+        while (it.hasNext()) {
+            Solicitud solicitud = it.next();
+            ob[0] = solicitud.getId();
+            ob[1] = solicitud.getHoraInicio();
+            ob[2] = solicitud.getHoraFin();
+            ob[3] = solicitud.isPrevista();
+            ob[4] = solicitud.getIdDepartamento();
+            ob[5] = solicitud.getTitulo();
+            ob[6] = solicitud.getTipo();
+            ob[7] = solicitud.isAlojamiento();
+            ob[8] = solicitud.getFechaInicio();
+            ob[9] = solicitud.getFechaFin();
+            ob[10] = solicitud.getEstado();
+            tabla.addRow(ob);
+        }
+        tabla1.setModel(tabla);
+    }
+
+    public void limpiarTabla() {
+        for (int i = 0; i < tabla.getRowCount(); i++) {
+            tabla.removeRow(i);
+            i = i - 1;
+        }
     }
 
     /**
@@ -223,33 +261,29 @@ public class Interfaz extends javax.swing.JFrame {
         CrearSolicitud = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jTextField21 = new javax.swing.JTextField();
+        txttituloCrearSolicitud = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        tipoCrearSolicitud = new javax.swing.JComboBox<>();
         jLabel55 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
-        jTextField23 = new javax.swing.JTextField();
+        txthorainicioCrearSolicitud = new javax.swing.JTextField();
         jLabel57 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
-        jLabel58 = new javax.swing.JLabel();
-        jTextField25 = new javax.swing.JTextField();
+        txtfechainicioCrearSolicitud = new javax.swing.JTextField();
         jLabel59 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jTextField28 = new javax.swing.JTextField();
-        jButton17 = new javax.swing.JButton();
-        jTextField26 = new javax.swing.JTextField();
-        jTextField27 = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jComboBox11 = new javax.swing.JComboBox<>();
+        crearCrearSolicitud = new javax.swing.JButton();
+        txthorafinalCrearSolicitud = new javax.swing.JTextField();
+        txtfechafinalCrearSolicitud = new javax.swing.JTextField();
+        alojamientoCrearSolicitud = new javax.swing.JCheckBox();
+        previstaCrearSolicitud = new javax.swing.JCheckBox();
         volverCrearSolicitud = new javax.swing.JButton();
+        txtiddepartamentoCrearSolicitud = new javax.swing.JTextField();
         ConsultarSolicitudes = new javax.swing.JPanel();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
-        jButton18 = new javax.swing.JButton();
-        jScrollPane19 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
+        consultarConsultarSolicitudes = new javax.swing.JButton();
+        panelConsultarSolicitudes = new javax.swing.JScrollPane();
+        tablaConsultarSolicitudes = new javax.swing.JTable();
         volverConsultarSolicitudes = new javax.swing.JButton();
         GestionarSolicitudes = new javax.swing.JPanel();
         jLabel64 = new javax.swing.JLabel();
@@ -334,7 +368,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(InicioSesionLayout.createSequentialGroup()
                         .addGap(117, 117, 117)
                         .addComponent(restablecerInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addContainerGap(381, Short.MAX_VALUE))
         );
         InicioSesionLayout.setVerticalGroup(
             InicioSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1157,7 +1191,6 @@ public class Interfaz extends javax.swing.JFrame {
         });
 
         habilitarModificarCurso.setText("Habilitar");
-        habilitarModificarCurso.setActionCommand("Habilitar");
         habilitarModificarCurso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         habilitarModificarCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1737,42 +1770,48 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel53.setText("Título:");
 
+        txttituloCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel54.setText("Tipo:");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "EXTRAESCOLAR", "COMPLEMENTARIA" }));
+        tipoCrearSolicitud.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Extraescolar", "Complementaria" }));
+        tipoCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel55.setText("Departamento:");
+        jLabel55.setText("ID del Departamento:");
 
         jLabel56.setText("Hora Inicio:");
 
-        jTextField23.addActionListener(new java.awt.event.ActionListener() {
+        txthorainicioCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txthorainicioCrearSolicitud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField23ActionPerformed(evt);
+                txthorainicioCrearSolicitudActionPerformed(evt);
             }
         });
 
         jLabel57.setText("Hora Final:");
+        jLabel57.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel58.setText("DNI Profesor:");
+        txtfechainicioCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel59.setText("Fecha inicio:");
 
         jLabel60.setText("Fecha Final:");
 
-        jLabel61.setText("Participantes:");
-
-        jButton17.setText("Crear");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        crearCrearSolicitud.setText("Crear");
+        crearCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        crearCrearSolicitud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                crearCrearSolicitudActionPerformed(evt);
             }
         });
 
-        jCheckBox1.setText("Alojamiento");
+        txthorafinalCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jCheckBox2.setText("Prevista");
+        txtfechafinalCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Biología y Geología", "Dibujo", "Economía", "Educación Física", "Filosofía", "Física y Química", "Francés", "Geografía e Historia", "Inglés", "Latín", "Lengua Castellana y Literatura", "Matemáticas", "Música", "Tecnología", "Administración y Gestión", "Formación y Orientación Laboral", "Informática y Comunicaciones", "Fabricación Mecánica", "Transporte y Mantenimiento de Vehículos" }));
+        alojamientoCrearSolicitud.setText("Alojamiento");
+
+        previstaCrearSolicitud.setText("Prevista");
 
         volverCrearSolicitud.setText("Volver");
         volverCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1783,143 +1822,125 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        txtiddepartamentoCrearSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         javax.swing.GroupLayout CrearSolicitudLayout = new javax.swing.GroupLayout(CrearSolicitud);
         CrearSolicitud.setLayout(CrearSolicitudLayout);
         CrearSolicitudLayout.setHorizontalGroup(
             CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(volverCrearSolicitud)
-                .addGap(83, 83, 83)
-                .addComponent(jLabel52))
-            .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                .addComponent(jLabel56)
-                .addGap(9, 9, 9)
-                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jLabel55)
-                .addGap(0, 0, 0)
-                .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel57)
-                .addGap(3, 3, 3)
-                .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(22, 22, 22)
+                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel59)
+                    .addComponent(jLabel56, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel57, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel60, javax.swing.GroupLayout.Alignment.LEADING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtfechainicioCrearSolicitud)
+                    .addComponent(txtfechafinalCrearSolicitud)
+                    .addComponent(txthorainicioCrearSolicitud)
+                    .addComponent(txthorafinalCrearSolicitud, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                    .addComponent(txttituloCrearSolicitud))
                 .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tipoCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CrearSolicitudLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(alojamientoCrearSolicitud))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearSolicitudLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(previstaCrearSolicitud)
+                            .addComponent(jLabel55))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtiddepartamentoCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 22, Short.MAX_VALUE))
             .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel59)
-                .addGap(5, 5, 5)
-                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jLabel61)
-                .addGap(10, 10, 10)
-                .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel60)
-                .addGap(9, 9, 9)
-                .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jCheckBox1)
-                .addGap(11, 11, 11)
-                .addComponent(jCheckBox2)
-                .addGap(256, 256, 256)
-                .addComponent(jButton17))
+                .addGap(228, 228, 228)
+                .addComponent(jLabel52)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearSolicitudLayout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(crearCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(volverCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         CrearSolicitudLayout.setVerticalGroup(
             CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CrearSolicitudLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
+                .addComponent(jLabel52)
+                .addGap(25, 25, 25)
                 .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(volverCrearSolicitud))
-                    .addComponent(jLabel52))
-                .addGap(32, 32, 32)
-                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel53)
-                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel54)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel56)
-                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel55)
-                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel57)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel58))
-                .addGap(18, 18, 18)
-                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txttituloCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel53))
+                    .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel54)
+                        .addComponent(tipoCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel61)
-                            .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(8, 8, 8)
-                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtfechainicioCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel55)
+                    .addComponent(txtiddepartamentoCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel60)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addGroup(CrearSolicitudLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton17))))
+                    .addComponent(txtfechafinalCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(previstaCrearSolicitud))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel56)
+                    .addComponent(txthorainicioCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(alojamientoCrearSolicitud))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel57)
+                    .addComponent(txthorafinalCrearSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48)
+                .addGroup(CrearSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(crearCrearSolicitud)
+                    .addComponent(volverCrearSolicitud))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jLabel62.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel62.setText("CONSULTAR SOLICITUDES");
+        jLabel62.setText("Consultar Solicitudes");
 
-        jButton18.setText("Buscar");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
+        consultarConsultarSolicitudes.setText("Consultar");
+        consultarConsultarSolicitudes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        consultarConsultarSolicitudes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                consultarConsultarSolicitudesActionPerformed(evt);
             }
         });
 
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+        tablaConsultarSolicitudes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "idSolicitud", "horaInicio", "horaFin", "comentarios", "prevista", "Departamento", "titulo", "tipo", "medioTransporte", "Profesor", "Alojamiento", "fechaInicio", "fechaFinal", "Participantes", "comenAlojamiento", "Estado"
+                "idSolicitud", "horaInicio", "horaFin", "prevista", "Departamento", "titulo", "tipo", "Alojamiento", "fechaInicio", "fechaFinal", "Estado"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jTable6.setDoubleBuffered(true);
-        jTable6.setDropMode(javax.swing.DropMode.ON);
-        jScrollPane19.setViewportView(jTable6);
+        tablaConsultarSolicitudes.setDoubleBuffered(true);
+        tablaConsultarSolicitudes.setDropMode(javax.swing.DropMode.ON);
+        panelConsultarSolicitudes.setViewportView(tablaConsultarSolicitudes);
 
         volverConsultarSolicitudes.setText("Volver");
         volverConsultarSolicitudes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1935,32 +1956,39 @@ public class Interfaz extends javax.swing.JFrame {
         ConsultarSolicitudesLayout.setHorizontalGroup(
             ConsultarSolicitudesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConsultarSolicitudesLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(volverConsultarSolicitudes)
-                .addGap(94, 94, 94)
-                .addComponent(jLabel62))
-            .addGroup(ConsultarSolicitudesLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jLabel63)
-                .addGap(17, 17, 17)
-                .addComponent(jButton18))
-            .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(152, 152, 152)
+                .addComponent(consultarConsultarSolicitudes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(volverConsultarSolicitudes)
+                .addGap(151, 151, 151))
+            .addGroup(ConsultarSolicitudesLayout.createSequentialGroup()
+                .addGroup(ConsultarSolicitudesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConsultarSolicitudesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(panelConsultarSolicitudes, javax.swing.GroupLayout.PREFERRED_SIZE, 1012, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConsultarSolicitudesLayout.createSequentialGroup()
+                        .addGap(423, 423, 423)
+                        .addComponent(jLabel62)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ConsultarSolicitudesLayout.setVerticalGroup(
             ConsultarSolicitudesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConsultarSolicitudesLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(ConsultarSolicitudesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(volverConsultarSolicitudes)
-                    .addComponent(jLabel62))
+                .addComponent(jLabel62)
                 .addGap(12, 12, 12)
                 .addGroup(ConsultarSolicitudesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConsultarSolicitudesLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addComponent(jLabel63))
-                    .addComponent(jButton18))
-                .addGap(17, 17, 17)
-                .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConsultarSolicitudesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(volverConsultarSolicitudes)
+                        .addComponent(consultarConsultarSolicitudes)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(panelConsultarSolicitudes, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jLabel64.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -2064,13 +2092,13 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(jLabel66)
                     .addComponent(txtcomentarioGestionarSolicitudes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(insertarGestionarSolicitudes))
-                .addGap(42, 42, 42)
+                .addGap(26, 26, 26)
                 .addGroup(GestionarSolicitudesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(denegarGestionarSolicitudes)
                     .addComponent(aprobarGestionarSolicitudes)
                     .addComponent(volverGestionarSolicitudes)
                     .addComponent(completadaGestionarSolicitudes))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2167,7 +2195,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(ModificarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(202, Short.MAX_VALUE)))
+                    .addContainerGap(229, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -2743,13 +2771,32 @@ public class Interfaz extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Departamento Eliminado");
     }//GEN-LAST:event_eliminarEliminarDepartamentoActionPerformed
 
-    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+    private void txthorainicioCrearSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txthorainicioCrearSolicitudActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23ActionPerformed
+    }//GEN-LAST:event_txthorainicioCrearSolicitudActionPerformed
 
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+    private void crearCrearSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCrearSolicitudActionPerformed
+        String titulo = txttituloCrearSolicitud.getText();
+        LocalDate fechainicio = LocalDate.parse(txtfechainicioCrearSolicitud.getText());
+        LocalDate fechafin = LocalDate.parse(txtfechafinalCrearSolicitud.getText());
+        LocalTime horainicio = LocalTime.parse(txthorainicioCrearSolicitud.getText());
+        LocalTime horafin = LocalTime.parse(txthorafinalCrearSolicitud.getText());
+        String tipo = tipoCrearSolicitud.getSelectedItem().toString();
+        int id = Integer.parseInt(txtiddepartamentoCrearSolicitud.getText());
+        boolean prevista = false;
+        boolean alojamiento = false;
+        if (previstaCrearSolicitud.isSelected()) {
+            prevista = true;
+        }
+        if (alojamientoCrearSolicitud.isSelected()) {
+            alojamiento = true;
+        }
+        Solicitud solicitud = new Solicitud(id, titulo, prevista, fechainicio, fechafin, horainicio, horafin, alojamiento, tipo, EstadoActividad.Solicitado);
+        actividades.guardarSolicitud(solicitud);
+        JOptionPane.showMessageDialog(this, "Solicitud Creada");
 
-    }//GEN-LAST:event_jButton17ActionPerformed
+
+    }//GEN-LAST:event_crearCrearSolicitudActionPerformed
 
     private void aprobarGestionarSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aprobarGestionarSolicitudesActionPerformed
         int id = Integer.parseInt(txtidGestionarSolicitudes.getText());
@@ -2757,6 +2804,7 @@ public class Interfaz extends javax.swing.JFrame {
         Actividad actividad = new Actividad("", solicitud.getId(), solicitud.getIdDepartamento(), solicitud.getTitulo(), solicitud.isPrevista(), solicitud.getFechaInicio(), solicitud.getFechaFin(), solicitud.getHoraInicio(), solicitud.getHoraFin(), solicitud.isAlojamiento(), solicitud.getTipo(), EstadoActividad.Aprobada);
         actividades.guardar(actividad);
         JOptionPane.showMessageDialog(this, "Actividad Aceptada");
+        actividades.eliminarSolicitud(id);
 
     }//GEN-LAST:event_aprobarGestionarSolicitudesActionPerformed
 
@@ -2766,6 +2814,7 @@ public class Interfaz extends javax.swing.JFrame {
         Actividad actividad = new Actividad("", solicitud.getId(), solicitud.getIdDepartamento(), solicitud.getTitulo(), solicitud.isPrevista(), solicitud.getFechaInicio(), solicitud.getFechaFin(), solicitud.getHoraInicio(), solicitud.getHoraFin(), solicitud.isAlojamiento(), solicitud.getTipo(), EstadoActividad.Denegada);
         actividades.guardar(actividad);
         JOptionPane.showMessageDialog(this, "Actividad Denegada");
+        actividades.eliminarSolicitud(id);
 
     }//GEN-LAST:event_denegarGestionarSolicitudesActionPerformed
 
@@ -2776,14 +2825,10 @@ public class Interfaz extends javax.swing.JFrame {
     private void insertarGestionarSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertarGestionarSolicitudesActionPerformed
         int id = Integer.parseInt(txtidGestionarSolicitudes.getText());
         String comentario = txtcomentarioGestionarSolicitudes.getText();
-        Solicitud solicitud = actividades.porIdSolicitud(id);
+        actividades.modificarComentario(comentario, id);
+        JOptionPane.showMessageDialog(this, "Comentario Insertado");
+        actividades.eliminarSolicitud(id);
 
-        if (!solicitud.getEstado().toString().equals("Solicitado")) {
-            actividades.modificarComentario(comentario, id);
-            JOptionPane.showMessageDialog(this, "Comentario Insertado");
-        } else {
-            JOptionPane.showMessageDialog(null, "La actividad no ha sido aprobada o denegada todavia.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
     }//GEN-LAST:event_insertarGestionarSolicitudesActionPerformed
 
     private void modificarModificarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarModificarDatosActionPerformed
@@ -2850,10 +2895,14 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_accionarealizarModificarDatosActionPerformed
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
+    private void consultarConsultarSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarConsultarSolicitudesActionPerformed
+        SortedSet<Solicitud> listaSolicitud = actividades.listarOrdenado();
+        limpiarTabla();
+        insertarTablaActividades(listaSolicitud, tablaConsultarSolicitudes);
+        //Y asigno el jTable al atributo tabla
+        tablaConsultarSolicitudes.setModel(tabla);        // TODO add your handling code here:
 
-    }//GEN-LAST:event_jButton18ActionPerformed
+    }//GEN-LAST:event_consultarConsultarSolicitudesActionPerformed
 
     private void entrarConsultarSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarConsultarSolicitudActionPerformed
         ConsultarSolicitudes.setVisible(true);
@@ -3238,15 +3287,18 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel ModificarProfesor;
     private javax.swing.JButton accederInicio;
     private javax.swing.JComboBox<String> accionarealizarModificarDatos;
+    private javax.swing.JCheckBox alojamientoCrearSolicitud;
     private javax.swing.JButton aprobarGestionarSolicitudes;
     private javax.swing.JComboBox<String> añoCrearCurso;
     private javax.swing.JButton cambiarContraseña;
     private javax.swing.JButton cargarCargarDatos;
     private javax.swing.JButton completadaGestionarSolicitudes;
+    private javax.swing.JButton consultarConsultarSolicitudes;
     private javax.swing.JButton crearCrearCurso;
     private javax.swing.JButton crearCrearDepartamento;
     private javax.swing.JButton crearCrearGrupo;
     private javax.swing.JButton crearCrearProfesor;
+    private javax.swing.JButton crearCrearSolicitud;
     private javax.swing.JComboBox<String> datoModificarDepartamento;
     private javax.swing.JComboBox<String> datoModificarProfesor;
     private javax.swing.JButton denegarGestionarSolicitudes;
@@ -3269,12 +3321,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton habilitarModificarGrupo;
     private javax.swing.JButton habilitarModificarProfesor;
     private javax.swing.JButton insertarGestionarSolicitudes;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JComboBox<String> jComboBox11;
-    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -3327,11 +3373,9 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
@@ -3341,20 +3385,15 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane19;
-    private javax.swing.JTable jTable6;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
     private javax.swing.JButton modificarModificarDatos;
     private javax.swing.JButton modificarModificarDepartamento;
     private javax.swing.JButton modificarModificarGrupo;
     private javax.swing.JButton modificarModificarProfesor;
+    private javax.swing.JScrollPane panelConsultarSolicitudes;
+    private javax.swing.JCheckBox previstaCrearSolicitud;
     private javax.swing.JButton restablecerInicio;
+    private javax.swing.JTable tablaConsultarSolicitudes;
+    private javax.swing.JComboBox<String> tipoCrearSolicitud;
     private javax.swing.JComboBox<String> tipoDatosModificarDatos;
     private javax.swing.JTextField txtApellidoCrearProfesor;
     private javax.swing.JTextField txtCodCursoEliminarCurso;
@@ -3379,10 +3418,16 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField txtcodigogrupoModificarGrupo;
     private javax.swing.JTextField txtcomentarioGestionarSolicitudes;
     private javax.swing.JTextField txtdatoModificarDepartamento;
+    private javax.swing.JTextField txtfechafinalCrearSolicitud;
+    private javax.swing.JTextField txtfechainicioCrearSolicitud;
+    private javax.swing.JTextField txthorafinalCrearSolicitud;
+    private javax.swing.JTextField txthorainicioCrearSolicitud;
     private javax.swing.JTextField txtidGestionarSolicitudes;
+    private javax.swing.JTextField txtiddepartamentoCrearSolicitud;
     private javax.swing.JTextField txtnAlumnosCrearGrupo;
     private javax.swing.JTextField txtnAlumnosModificarGrupo;
     private javax.swing.JTextField txtnombreCrearDepartamento;
+    private javax.swing.JTextField txttituloCrearSolicitud;
     private javax.swing.JButton volverCargarDatos;
     private javax.swing.JButton volverConsultarSolicitudes;
     private javax.swing.JButton volverContraseña;

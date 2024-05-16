@@ -24,6 +24,13 @@ public class Transporte {
         this.idActividad = idActividad;
     }
 
+    public Transporte(String tipo, double precio, String descripcion, int idActividad) {
+        this.tipo = tipo;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.idActividad = idActividad;
+    }
+
     public String getTipo() {
         return tipo;
     }

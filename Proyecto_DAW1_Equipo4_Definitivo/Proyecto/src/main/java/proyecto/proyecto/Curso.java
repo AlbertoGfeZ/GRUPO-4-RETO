@@ -18,6 +18,15 @@ public class Curso {
     Etapa etapa;
     boolean activo;
 
+    /**
+     * Constructor que pasa todos los parametros
+     * @param id
+     * @param codigo
+     * @param descripcion
+     * @param etapa
+     * @param activo 
+     */
+    
     public Curso(int id, String codigo, String descripcion, Etapa etapa, boolean activo) {
         this.id = id;
         this.codigo = codigo;
