@@ -10,7 +10,7 @@ Explicación del código html y css con [Markdown](https://github.com/AlbertoGfe
 
 Este proyecto ha sido desarrollado con la contribución y el apoyo de las siguientes personas:
 
-* **Alberto González:** GitHub y [página web](https://albertogfez.github.io/WEBSITE-ALBERTO/)
+* **[Alberto González](https://github.com/AlbertoGfeZ)** GitHub y [página web](https://albertogfez.github.io/WEBSITE-ALBERTO/)
 * **Elio Laguna:** Bases de datos
 * **Jimena Fernández:** Servidores
 * **Hugo Colio:** [página web](https://albertogfez.github.io/WEBSITE-ALBERTO/)
