@@ -11,9 +11,9 @@ Explicación del código html y css con [Markdown](https://github.com/AlbertoGfe
 Este proyecto ha sido desarrollado con la contribución y el apoyo de las siguientes personas:
 
 * **[Alberto González](https://github.com/AlbertoGfeZ)** GitHub y [página web](https://albertogfez.github.io/WEBSITE-ALBERTO/)
-* **Elio Laguna:** Bases de datos
-* **Jimena Fernández:** Servidores
-* **Hugo Colio:** [página web](https://albertogfez.github.io/WEBSITE-ALBERTO/)
-* **Asier González:** Java
+* **[Elio Laguna](https://github.com/BAI-1h3)** Bases de datos
+* **[Jimena Fernández](https://github.com/jimenafdezz)** Servidores
+* **[Hugo Colio](https://github.com/hugo-colio)** [página web](https://albertogfez.github.io/WEBSITE-ALBERTO/)
+* **[Asier González](https://github.com/asiglez)** Java
 
 Agradecemos sinceramente a todos los que han ayudado a hacer posible este proyecto.
