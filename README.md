@@ -20,6 +20,6 @@ Agradecemos sinceramente a todos los que han ayudado a hacer posible este proyec
 
 <style>
 a {
-    color: lime; /* Cambia el color de los enlaces*/
+    color: #b5e853; /* Cambia el color de los enlaces*/
 }
 </style>
