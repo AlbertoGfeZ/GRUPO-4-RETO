@@ -5,7 +5,7 @@ En el grupo 4 hemos completado el reto con todos sus requerimientos; [página we
 ## Documentaciones:
 * **[Web](https://github.com/AlbertoGfeZ/GRUPO-4-RETO/blob/Markdown-Web/MARKDOWN.md)**
 * **[Java](https://github.com/AlbertoGfeZ/GRUPO-4-RETO/blob/DGC/DCA.pdf)**
-* **[Implementación y despliegue]()**
+* **[Implementación y despliegue]((https://github.com/AlbertoGfeZ/GRUPO-4-RETO/blob/GDD/GDD.pdf))**
 * **[Base de datos]()**
 
 
