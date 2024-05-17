@@ -13,7 +13,7 @@ import Enums.EstadoActividad;
  *
  * @author DAW114
  */
-public class Solicitud {
+public class Solicitud implements Comparable<Solicitud> {
 
     int id;
     int idDepartamento;
@@ -142,4 +142,23 @@ public class Solicitud {
         this.estado = estado;
     }
 
+    @Override
+    public int compareTo(Solicitud o) {
+        int comparacion = o.getEstado().compareTo(this.getEstado());
+        if (comparacion != 0) {
+            return comparacion;
+        } else {
+            return compararFecha(o);
+        }
+    }
+
+    public int compararFecha(Solicitud o) {
+        if (this.getFechaInicio().isAfter(o.getFechaInicio())) {
+            return -1;
+        } else if (this.getFechaInicio().isBefore(o.getFechaFin())) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
