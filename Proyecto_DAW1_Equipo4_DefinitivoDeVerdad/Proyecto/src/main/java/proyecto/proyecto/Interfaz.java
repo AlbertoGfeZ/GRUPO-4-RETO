@@ -94,7 +94,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void insertarTablaActividades(SortedSet<Solicitud> lista, JTable tabla1) {
         tabla = (DefaultTableModel) tabla1.getModel();
-        Object[] ob = new Object[10];
+        Object[] ob = new Object[11];
         Iterator<Solicitud> it = lista.iterator();
         while (it.hasNext()) {
             Solicitud solicitud = it.next();
