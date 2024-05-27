@@ -1,0 +1,25 @@
+idcurso,codcurso,descurso,etapa,ACTIVO
+1,ESO1,Educación Secundaria Obligatoria - 1º,ESO,1
+2,ESO2,Educación Secundaria Obligatoria - 2º,ESO,1
+3,ESO3,Educación Secundaria Obligatoria - 3º,ESO,1
+4,ESO4,Educación Secundaria Obligatoria - 4º,ESO,1
+5,BCH1,Bachillerato 1º,Bachillerato,1
+6,BCH2,Bachillerato 2º,Bachillerato,1
+7,FM1,Fabricación y montaje - 1º,FPGM,1
+8,FM1,Fabricación y montaje - 2º,FPGM,1
+9,MV1,Mantenimiento de Vehículos - 1º,FPGM,1
+10,MV2,Mantenimiento de Vehículos - 2º,FPGM,1
+11,CAR1,Carrocería - 1º,FPGM,1
+12,CAR2,Carrocería - 2º,FPGM,1
+13,EVA1,Electromecánica de Vehículos Automóviles - 1º,FPGM,1
+14,EVA2,Electromecánica de Vehículos Automóviles - 2º,FPGM,1
+15,SMR1,Sistemas Microinformáticos y Redes - 1º,FPGM,1
+16,SMR2,Sistemas Microinformáticos y Redes - 2º,FPGM,1
+17,AF1,Administración y Finanzas - 1º,FPGS,1
+18,AF2,Administración y Finanzas - 2º,FPGS,1
+19,DAM1,Desarrollo de Aplicaciones Multiplataforma - 1º,FPGS,1
+20,DAM2,Desarrollo de Aplicaciones Multiplataforma - 2º,FPGS,1
+21,DAW1,Desarrollo de Aplicaciones Web - 1º,FPGS,1
+22,DAW2,Desarrollo de Aplicaciones Web - 2º,FPGS,1
+23,DFM1,Diseño en Fabricación Mecánica - 1º,FPGS,1
+24,DFM2,Diseño en Fabricación Mecánica - 2º,FPGS,1
